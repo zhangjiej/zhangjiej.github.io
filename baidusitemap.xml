@@ -430,33 +430,6 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
-    <lastmod>2018-01-15T13:19:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>hexo博客图床设置</title>
-        <pubTime>2018-01-15T09:32:04.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>图床</tag>
-         
-        <tag>七牛云</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
-          
-             
-              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zhangjiej.github.io/posts/set_hexo_available_in_google/</loc>
     <lastmod>2018-01-15T13:19:32.000Z</lastmod>
     <data>
@@ -482,18 +455,18 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/URL_optimization_in_hexo/</loc>
-    <lastmod>2018-01-15T07:23:08.000Z</lastmod>
+    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
+    <lastmod>2018-01-15T13:19:32.000Z</lastmod>
     <data>
         <display>
-        <title>hexo博客的URL优化</title>
-        <pubTime>2018-01-13T12:34:52.000Z</pubTime>
+        <title>hexo博客图床设置</title>
+        <pubTime>2018-01-15T09:32:04.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>URL</tag>
+        <tag>图床</tag>
          
-        <tag>永久链接</tag>
+        <tag>七牛云</tag>
          
          
            
@@ -527,6 +500,33 @@
           
              
               <breadCrumb title="基本概念" url="http://zhangjiej.github.io/categories/%E5%8E%8B%E7%BC%A9%E6%84%9F%E7%9F%A5/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangjiej.github.io/posts/URL_optimization_in_hexo/</loc>
+    <lastmod>2018-01-15T07:23:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>hexo博客的URL优化</title>
+        <pubTime>2018-01-13T12:34:52.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>URL</tag>
+         
+        <tag>永久链接</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
+          
+             
+              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
           
         </display>
     </data>
