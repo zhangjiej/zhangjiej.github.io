@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:site_name" content="张杰钧的博客">
+<meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+
+
+
+
+
+  <title>java知识点整理 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张杰钧的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Life was like a box of chocolates, you never know what you're gonna get.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+
+            
+              标签
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+
+            
+              分类
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/review_of_java_for_interview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张杰钧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张杰钧的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java知识点整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T09:57:59+08:00">2018-03-15</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/找工作/" itemprop="url" rel="index">
+                    <span itemprop="name">找工作</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一些java名词和技术，与java面经的知识有很多重叠，资料全部来自网上搜集，如有错误请见谅。</p>
+<h2 id="servlet"><a href="#servlet" class="headerlink" title="servlet"></a>servlet</h2><p><strong>Servlet</strong>（Server Applet），全称Java <strong>Servlet</strong>，未有中文译文。 是用Java编写的服务器端程序。 其主要功能在于交互式地浏览和修改数据，生成动态Web内容。</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p><a href="http://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener">MySQL教程链接</a></p>
+<h2 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h2><p>SSM SPRING+SPING MVC + MYBATIS </p>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p>Spring的一个核心功能是IOC，就是将Bean初始化加载到容器中，Bean是如何加载到容器的，可以使用Spring注解方式或者Spring XML配置方式。<br>Spring注解方式减少了配置文件内容，更加便于管理，并且使用注解可以大大提高了开发效率！<br>下面安装分类讲解Spring中常用的一些注解。</p>
+<p>AOP 即 Aspect Oriented Program 面向切面编程 。首先，在面向切面编程的思想里面，把功能分为核心业务功能，和周边功能。<br>所谓的核心业务，比如登陆，增加数据，删除数据都叫核心业务<br>所谓的周边功能，比如性能统计，日志，事务管理等等 </p>
+<p>周边功能在Spring的面向切面编程AOP思想里，即被定义为切面 </p>
+<p>在面向切面编程AOP的思想里面，核心业务功能和切面功能分别独立进行开发<br>然后把切面功能和核心业务功能 “编织” 在一起，这就叫AOP</p>
+<blockquote>
+<ol>
+<li>功能分两大类，辅助功能和核心业务功能</li>
+<li>辅助功能和核心业务功能彼此独立进行开发</li>
+<li>比如登陆功能，即便是没有性能统计和日志输出，也可以正常运行</li>
+<li>如果有需要，就把”日志输出” 功能和 “登陆” 功能 编织在一起，这样登陆的时候，就可以看到日志输出了</li>
+<li>辅助功能，又叫做切面，这种能够选择性的，低耦合的把切面和核心业务功能结合在一起的编程思想，就叫做切面编程</li>
+</ol>
+</blockquote>
+<h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><p>Java数据库连接，（Java Database Connectivity，简称<strong>JDBC</strong>）是Java语言中用来规范客户端程序如何来访问数据库的应用程序接口，提供了诸如查询和更新数据库中数据的方法。</p>
+<h2 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h2><p>比如：抽象类有没有构造函数。答案：有，接口没有构造函数</p>
+<p>先说区别：</p>
+<ol>
+<li><p>接口可以多实现，一个类实现多个接口，抽象类只能单继承，即一个类只能继承一个抽象类。</p>
+</li>
+<li><p>抽象类可以有非抽象的方法和构造方法，变量等，但是接口只能用抽象方法和静态常量。</p>
+</li>
+<li><p>抽象类和子类具有父子关系，即子类可以拥有父类的属性。接口被实现之后，由于接口中变量都是静态常量，因此不存在继承关系。</p>
+</li>
+</ol>
+<p>相同点：就是二者均不能被实例化，new只能是通过实现类或者子类实现。</p>
+<p>总结一下，图标链接：<a href="http://www.importnew.com/12399.html" target="_blank" rel="noopener">http://www.importnew.com/12399.html</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>参数</strong></th>
+<th><strong>抽象类</strong></th>
+<th><strong>接口</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认的方法实现</td>
+<td>它可以有默认的方法实现</td>
+<td>接口完全是抽象的。它根本不存在方法的实现</td>
+</tr>
+<tr>
+<td>实现</td>
+<td>子类使用<strong>extends</strong>关键字来继承抽象类。如果子类不是抽象类的话，它需要提供抽象类中所有声明的方法的实现。</td>
+<td>子类使用关键字<strong>implements</strong>来实现接口。它需要提供接口中所有声明的方法的实现</td>
+</tr>
+<tr>
+<td>构造器</td>
+<td>抽象类可以有构造器</td>
+<td>接口不能有构造器</td>
+</tr>
+<tr>
+<td>与正常Java类的区别</td>
+<td>除了你不能实例化抽象类之外，它和普通Java类没有任何区别</td>
+<td>接口是完全不同的类型</td>
+</tr>
+<tr>
+<td>访问修饰符</td>
+<td>抽象方法可以有<strong>public</strong>、<strong>protected</strong>和<strong>default</strong>这些修饰符</td>
+<td>接口方法默认修饰符是<strong>public</strong>。你不可以使用其它修饰符。</td>
+</tr>
+<tr>
+<td>main方法</td>
+<td>抽象方法可以有main方法并且我们可以运行它</td>
+<td>接口没有main方法，因此我们不能运行它。</td>
+</tr>
+<tr>
+<td>多继承</td>
+<td>抽象方法可以继承一个类和实现多个接口</td>
+<td>接口只可以继承一个或多个其它接口</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>它比接口速度要快</td>
+<td>接口是稍微有点慢的，因为它需要时间去寻找在类中实现的方法。</td>
+</tr>
+<tr>
+<td>添加新方法</td>
+<td>如果你往抽象类中添加新的方法，你可以给它提供默认的实现。因此你不需要改变你现在的代码。</td>
+<td>如果你往接口中添加方法，那么你必须改变实现该接口的类。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>描述一下二者设计的目的以及二者使用条件：</p>
+<p>抽象类就是抽象了子类的共有的特性，但是不给具体实现，比如水果之于苹果，苹果就继承水果的特性。当然还有苹果之于红苹果 ，苹果也可以是抽象类。</p>
+<p>接口更像是一种模板和协议，一旦实现了这个接口，就要严格实现接口提供的所有方法，必须按照接口给的逻辑去设计某个类。</p>
+<p>显然如果希望保留一部分共同的方法，就使用抽象类，这样所有子类都可以使用该方法，不用再写一遍。如果实现多继承，那就没办法了，抽象类只能继承一个，那就使用接口，这样类就可以同时具有多个接口的规则，但是方法要全部实现一遍。</p>
+<p>从结果来看抽象类的子类都是相似的类，他们有共同的属性和方法，但是实现接口的多个类他们之间区别却可以很大，但是他们均有共同的行为，即均要实现接口提供的方法，比如飞机和鸟实现了接口Fly，于是他们的类中就要按照Fly的逻辑提供相应的方法。可以总结为<strong>抽象类是对类抽象，接口是对行为抽象</strong>。</p>
+<p>在自己设计抽象类或者接口的时候，显然抽象类要自下而上，必须知道所有子类的细节，才能提炼他们的共性，不然抽象类的设计就有缺陷（共性不够全或者层次不合理）。而接口则不同，设计的时候完全仅仅从自身出发，考虑自身的特性，而不用在乎什么类实现该接口，只需要设计自己框架内的规则。所有的类均遵守该规则即可。比如设计Fly接口的时候只需要提供飞行的基本逻辑方法，飞行高度，速度等等。而不必考虑什么类（鸟，飞机，火箭。。）实现Fly接口。</p>
+<p>以上分析借鉴<a href="http://blog.csdn.net/chenssy/article/details/12858267，感谢作者" target="_blank" rel="noopener">http://blog.csdn.net/chenssy/article/details/12858267，感谢作者</a></p>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h2 id="封装、多态与继承"><a href="#封装、多态与继承" class="headerlink" title="封装、多态与继承"></a>封装、多态与继承</h2><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><p>内部类直白就是在类的内部再定义一个类。目的是更好的实现继承关系，更好的实现多重继承。</p>
+<p>说明：一个类已经实现了一个接口，而内部类则可以实现另一个接口，相互之间不受影响。</p>
+<p>分为 成员内部类 局部内部类 匿名内部类 静态内部类</p>
+<p>好处：</p>
+<p>　　1.每个内部类都能独立的继承一个接口的实现，所以无论外部类是否已经继承了某个(接口的)实现，对于内部类都没有影响。内部类使得多继承的解决方案变得完整，</p>
+<p>　　2.方便将存在一定逻辑关系的类组织在一起，又可以对外界隐藏。</p>
+<p>　　3.方便编写事件驱动程序</p>
+<p>　　4.方便编写线程代码</p>
+<h2 id="SpringMvc"><a href="#SpringMvc" class="headerlink" title="SpringMvc"></a>SpringMvc</h2><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p><img src="http://img.my.csdn.net/uploads/201211/27/1354020417_5176.jpg" alt=""></p>
+<p>java能处理的异常均来自于一个共同的祖先Throwable。有两个重要的子类，Error和Exception。二者各自均有大量的子类。</p>
+<p>Error一般指程序无法处理的错误，是运行中比较严重的错误，大多数与代码与操作无关，比如JVM运行时出现问题等。这些情况一般JVM会选择线程终止。</p>
+<p>Exception指程序本身可以处理的异常。RuntimeException及其子类就是JVM常用操作引发的错误。比如数组越界等。</p>
+<p>运行异常java编译器不回去检查他，编译可以通过。而RuntimeExceprion之外的Exception理论上不处理程序就不可能编译通过。</p>
+<p>异常的捕捉和抛出：</p>
+<p>总体来说，Java规定：对于可查异常必须捕捉、或者声明抛出。允许忽略不可查的RuntimeException和Error。</p>
+<p>在Java中提供了一些异常用来描述经常发生的错误，对于这些异常，有的需要程序员进行捕获处理或声明抛出，有的是由Java虚拟机自动进行捕获处理。Java中常见的异常类:</p>
+<h3 id="1-runtimeException子类"><a href="#1-runtimeException子类" class="headerlink" title="1. runtimeException子类:"></a><strong>1. runtimeException子类:</strong></h3><blockquote>
+<p>​    1、 java.lang.ArrayIndexOutOfBoundsException</p>
+<p>​    数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。</p>
+<p>​    2、java.lang.ArithmeticException</p>
+<p>​    算术条件异常。譬如：整数除零等。</p>
+<p>​    3、java.lang.NullPointerException</p>
+<p>​    空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等</p>
+<p>​    4、java.lang.ClassNotFoundException</p>
+<p>​    找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。</p>
+<p>   5、java.lang.NegativeArraySizeException  数组长度为负异常</p>
+<p>   6、java.lang.ArrayStoreException 数组中包含不兼容的值抛出的异常</p>
+<p>   7、java.lang.SecurityException 安全性异常</p>
+<p>   8、java.lang.IllegalArgumentException 非法参数异常</p>
+</blockquote>
+<h3 id="2-IOException"><a href="#2-IOException" class="headerlink" title="2.IOException"></a>2.<strong>IOException</strong></h3><blockquote>
+<p>IOException：操作输入流和输出流时可能出现的异常。</p>
+<p>EOFException   文件已结束异常</p>
+<p>FileNotFoundException   文件未找到异常</p>
+</blockquote>
+<h3 id="3-其他"><a href="#3-其他" class="headerlink" title="3. 其他"></a>3. 其他</h3><blockquote>
+<p>ClassCastException    类型转换异常类</p>
+<p>ArrayStoreException  数组中包含不兼容的值抛出的异常</p>
+<p>SQLException   操作数据库异常类</p>
+<p>NoSuchFieldException   字段未找到异常</p>
+<p>NoSuchMethodException   方法未找到抛出的异常</p>
+<p>NumberFormatException    字符串转换为数字抛出的异常</p>
+<p>StringIndexOutOfBoundsException 字符串索引超出范围抛出的异常</p>
+<p>IllegalAccessException  不允许访问某类异常</p>
+<p>InstantiationException  当应用程序试图使用Class类中的newInstance()方法创建一个类的实例，而指定的类对象无法被实例化时，抛出该异常</p>
+</blockquote>
+<h3 id="异常的抛出和异常的捕获"><a href="#异常的抛出和异常的捕获" class="headerlink" title="异常的抛出和异常的捕获"></a>异常的抛出和异常的捕获</h3><p>如果一个方法可能可能出现异常（比如内部调用其他方法而出现的异常）如果不能在内部进行捕获并处理，就要抛出，而抛出的方法必须在方法命名的时候就要声明。</p>
+<p>比如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">methodname <span class="keyword">throws</span> Exception1,Exception2,..,ExceptionN  </span><br><span class="line">&#123;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一旦方法声明中抛出异常，则方法内部不需要处理这些异常，这些异常会自动被抛向调用该方法的方法，并且由它来处理。</p>
+<h3 id="try-catch-final"><a href="#try-catch-final" class="headerlink" title="try catch final"></a>try catch final</h3><p>使用try 和大括号包含一段代码，目的是监控代码中是否抛出了异常。</p>
+<p>一旦抛出异常，就有catch中的代码接管，不会执行try剩余的代码。</p>
+<p>最后无论有没有异常，try执行结束或者catch执行结束均要执行final。</p>
+<p>1、不管有木有出现异常，finally块中代码都会执行；<br>2、当try和catch中有return时，finally仍然会执行；<br>3、finally是在return后面的表达式运算后执行的（此时并没有返回运算后的值，而是先把要返回的值保存起来，管finally中的代码怎么样，返回的值都不会改变，任然是之前保存的值），所以函数返回值是在finally执行前确定的；<br>4、finally中最好不要包含return，否则程序会提前退出，返回值不是try或catch中保存的返回值。</p>
+<h3 id="传值还是传引用"><a href="#传值还是传引用" class="headerlink" title="传值还是传引用"></a>传值还是传引用</h3><p>答： java里面只有传值，没有传引用。我的理解，任何一个代码块跳转的时候（就是函数调用，还包括上面的调用final里面的代码）传递的都是值，而不是指向对象的指针（引用）。</p>
+<p>区别在于，你传一个基本类型的变量a=1，那么就是复制1这个值传过去。当你在代码块内部写 x=a之类的操作就是将新的x变量指向栈内存的1的地址。因此怎么写都不会改变原来a指向1的事实，结果输出a还是1。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">String str = <span class="string">"hello"</span>;</span><br><span class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder(<span class="string">"iphone"</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    val = <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line">change(a); <span class="comment">// 传入的是栈内存中数值1的地址，也就是1这个值，之后新的val变量指向了100的地址，跟原先的a指向1没有关系。其实传入的1这个值也没用上。</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(String test)</span> </span>&#123;</span><br><span class="line">    test = <span class="string">"world;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">change(str); // 同上， 新的test变量指向了world，原本的str指向哪里不发生变化。</span></span><br><span class="line"><span class="string">void change(StringBuilder builder) &#123;</span></span><br><span class="line"><span class="string">    builder.append("</span><span class="number">4</span><span class="string">");</span></span><br><span class="line"><span class="string">    builder = new StringBuilder("</span>ipad<span class="string">");</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">change(sb);//一旦传的是引用变量，那么就是在堆内存中的地址，也是一种值，但是其对应的内容就可以是随便了。当使用append方法的时候，就是将堆内存中的数据修改成iphone4。然后新的builder指向这个地址。之后new的ipad，再将builder指向新的ipad的地址。出来之后sb指向哪不发生变化，但是由于地址上存的内容被修改了。因此sb就变成iphone4</span></span><br></pre></td></tr></table></figure>
+<h3 id="return-返回的顺序"><a href="#return-返回的顺序" class="headerlink" title="return 返回的顺序"></a>return 返回的顺序</h3><p>先说结论</p>
+<p>return返回之前，执行final语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123; </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">       System.out.println(<span class="string">"return value of getValue(): "</span> + getValue()); </span><br><span class="line">    &#125; </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getValue</span><span class="params">()</span> </span>&#123; </span><br><span class="line">       <span class="keyword">int</span> i = <span class="number">1</span>; </span><br><span class="line">       <span class="keyword">try</span> &#123; </span><br><span class="line">                <span class="keyword">return</span> (i+<span class="number">1</span>); </span><br><span class="line">       &#125; <span class="keyword">finally</span> &#123; </span><br><span class="line">                i++; </span><br><span class="line">          		System.out.println(<span class="string">"final block "</span>);</span><br><span class="line">       &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码，首先执行try，再执行 return内部的语句i+1，但是执行i+1就是i变成2的之后，要返回2之前，要先执行final代码，因此屏幕上会先输出final block再输出return value of getValue():2 但是为什么是2 ，就要提到上面讲的传值的问题。在final代码块中得到的数仅仅是2这个值，而i++就是新的i指向了3这个值。而try代码块中的i指向2并没有发生变化。（基本类型不存在修改内存中的值，因为存在栈内存中，改变了就是重新指向新的栈内存）。因此返回输出的是2.</p>
+<h3 id="扩展：错误和异常的区别-Error-vs-Exception"><a href="#扩展：错误和异常的区别-Error-vs-Exception" class="headerlink" title="扩展：错误和异常的区别(Error vs Exception)"></a>扩展：错误和异常的区别(Error vs Exception)</h3><p>1) <strong>java.lang.Error</strong>: Throwable的子类，用于标记严重错误。<strong>合理的应用程序不应该去try/catch这种错误。绝大多数的错误都是非正常的，就根本不该出现的。</strong></p>
+<p><strong>java.lang.Exception</strong>: Throwable的子类，用于指示一种合理的程序想去catch的条件。<strong>即它仅仅是一种程序运行条件，而非严重错误，并且鼓励用户程序去catch它。</strong></p>
+<p>2)  Error和RuntimeException 及其子类都是未检查的异常（unchecked exceptions），而所有其他的Exception类都是检查了的异常（checked exceptions）.<br><strong>checked exceptions:</strong> 通常是从一个可以恢复的程序中抛出来的，并且最好能够从这种异常中使用程序恢复。比如FileNotFoundException, ParseException等。检查了的异常发生在编译阶段，必须要使用try…catch（或者throws）否则编译不通过。<br><strong>unchecked exceptions:</strong> 通常是如果一切正常的话本不该发生的异常，但是的确发生了。发生在运行期，具有不确定性，主要是由于程序的逻辑问题所引起的。比如ArrayIndexOutOfBoundException, ClassCastException等。从语言本身的角度讲，程序不该去catch这类异常，虽然能够从诸如RuntimeException这样的异常中catch并恢复，但是并不鼓励终端程序员这么做，因为完全没要必要。因为这类错误本身就是bug，应该被修复，出现此类错误时程序就应该立即停止执行。 因此，面对Errors和unchecked exceptions应该让程序自动终止执行，程序员不该做诸如try/catch这样的事情，而是应该查明原因，修改代码逻辑。</p>
+<p>RuntimeException：RuntimeException体系包括错误的类型转换、数组越界访问和试图访问空指针等等。</p>
+<p>处理RuntimeException的原则是：如果出现 RuntimeException，那么一定是程序员的错误。例如，可以通过检查数组下标和数组边界来避免数组越界访问异常。其他（IOException等等）checked异常一般是外部错误，例如试图从文件尾后读取数据等，这并不是程序本身的错误，而是在应用环境中出现的外部错误。 </p>
+<h2 id="多线程-1"><a href="#多线程-1" class="headerlink" title="多线程"></a>多线程</h2><h3 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h3><p><strong>1、</strong>通过某个类继承Thread类，并且重写run()方法来实现<strong>（不推荐）</strong></p>
+<p><strong>2、</strong>通过某个类实现Runnable接口，并且重写run()方法 来实现</p>
+<p>不推荐使用第一种的原因：Java是单继承的，如果某个类extends了Thread类，将不能再继承别的类，影响了代码的延展性。</p>
+<p>俩种方法的区别：启动方法不同。</p>
+<p>方法1：直接   线程名.start（）；即可启动线程。</p>
+<p>方法2：先new一个对象，如：Test t=new Test();   //此时线程并没有被创建。</p>
+<p>然后建立线程对象，并且将t放入其中， Thread td1=new Thread(t);</p>
+<p>最后通过td1.start()来启动线程。</p>
+<p>“方法2的启动方式其实就是将实现了Runnable接口的类的对象转换成标准的Thread类对象，然后再.start（）来启动”</p>
+<p>为什么要覆盖run方法呢？</p>
+<p>Thread类用于描述线程，该类就定义了一个功能，用于存储线程要运行的代码。该存储功能就是run方法。也就是说Thread类中的run方法，用于存储线程要运行的代码。</p>
+<p>thread.join()</p>
+<p>该方法是等待某个线程结束之后，才会执行之后的代码。</p>
+<p>见 <a href="https://blog.csdn.net/dabing69221/article/details/17472901" target="_blank" rel="noopener">https://blog.csdn.net/dabing69221/article/details/17472901</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </p>
+<h3 id="Start和Run方法"><a href="#Start和Run方法" class="headerlink" title="Start和Run方法"></a>Start和Run方法</h3><p>start是启动一个线程，但是不立刻运行它，该线程处于就绪状态，会正常运行start后面的代码，顺序不定</p>
+<p>然而run是立刻运行该线程，在运行run下面的代码，就是顺序执行，和普通方法调用                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               没有区别。</p>
+<h3 id="sleep-和wait-的区别"><a href="#sleep-和wait-的区别" class="headerlink" title="sleep()和wait()的区别"></a>sleep()和wait()的区别</h3><p>sleep是Thread类的方法,wait是Object类中定义的方法</p>
+<p>sleep()睡眠时，保持对象锁，仍然占有该锁；而wait()睡眠时，释放对象锁。</p>
+<p>wait()使用notify或者notifyAlll或者指定睡眠时间来唤醒当前等待池中的线程。</p>
+<p><strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
+<h3 id="Synchronized-（同步）关键字-："><a href="#Synchronized-（同步）关键字-：" class="headerlink" title="Synchronized （同步）关键字 ："></a>Synchronized （同步）关键字 ：</h3><p>同步 可以是同步代码块，也可以同步一个函数。</p>
+<p>synchronized（this）{}指的是这段代码使用对象。</p>
+<p>synchronized（Object）{}指的就是Object这个对象。其实两者可以是一样的</p>
+<p>上面两种情况就是要是想运行{}内部的代码，必须获得this:调用这段代码的对象的锁，或者Object这个对象的锁。</p>
+<p>如果synchronized后面修饰的是方法或者静态变量。对于修饰静态变量就是对于这整个类的所有实例都要申请同一把锁来使用这个静态变量。而修饰方法则是对每个类实例的方法，都有一把锁，要使用这个实例的方法，就要先申请锁才能调用这个方法。</p>
+<h3 id="CAS与乐观锁"><a href="#CAS与乐观锁" class="headerlink" title="CAS与乐观锁"></a>CAS与乐观锁</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/collection_of_company_information/" rel="next" title="秋招企业信息汇总">
+                <i class="fa fa-chevron-left"></i> 秋招企业信息汇总
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/collection_of_qusetions_in_java_interview/" rel="prev" title="java面经汇总">
+                java面经汇总 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">张杰钧</p>
+              <p class="site-description motion-element" itemprop="description">张杰钧的博客，知识的积累与分享。</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet"><span class="nav-number">1.</span> <span class="nav-text">servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSM"><span class="nav-number">3.</span> <span class="nav-text">SSM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">4.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC"><span class="nav-number">5.</span> <span class="nav-text">JDBC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类与接口"><span class="nav-number">6.</span> <span class="nav-text">抽象类与接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">7.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装、多态与继承"><span class="nav-number">8.</span> <span class="nav-text">封装、多态与继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">9.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMvc"><span class="nav-number">10.</span> <span class="nav-text">SpringMvc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-runtimeException子类"><span class="nav-number">11.1.</span> <span class="nav-text">1. runtimeException子类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-IOException"><span class="nav-number">11.2.</span> <span class="nav-text">2.IOException</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-其他"><span class="nav-number">11.3.</span> <span class="nav-text">3. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常的抛出和异常的捕获"><span class="nav-number">11.4.</span> <span class="nav-text">异常的抛出和异常的捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch-final"><span class="nav-number">11.5.</span> <span class="nav-text">try catch final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传值还是传引用"><span class="nav-number">11.6.</span> <span class="nav-text">传值还是传引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return-返回的顺序"><span class="nav-number">11.7.</span> <span class="nav-text">return 返回的顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展：错误和异常的区别-Error-vs-Exception"><span class="nav-number">11.8.</span> <span class="nav-text">扩展：错误和异常的区别(Error vs Exception)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程-1"><span class="nav-number">12.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的创建"><span class="nav-number">12.1.</span> <span class="nav-text">线程的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start和Run方法"><span class="nav-number">12.2.</span> <span class="nav-text">Start和Run方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和wait-的区别"><span class="nav-number">12.3.</span> <span class="nav-text">sleep()和wait()的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synchronized-（同步）关键字-："><span class="nav-number">12.4.</span> <span class="nav-text">Synchronized （同步）关键字 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS与乐观锁"><span class="nav-number">12.5.</span> <span class="nav-text">CAS与乐观锁</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张杰钧</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

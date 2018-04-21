@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:site_name" content="张杰钧的博客">
+<meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+
+
+
+
+
+  <title>NSDI整理 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张杰钧的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Life was like a box of chocolates, you never know what you're gonna get.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+
+            
+              标签
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+
+            
+              分类
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/summary_of_NSDI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张杰钧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张杰钧的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NSDI整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T16:25:56+08:00">2018-03-17</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科研/" itemprop="url" rel="index">
+                    <span itemprop="name">科研</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="NSDI‘17"><a href="#NSDI‘17" class="headerlink" title="NSDI‘17"></a>NSDI‘17</h2><p>The NSDI ’17 program showcases new and exciting advances in <strong>storage systems</strong>, <strong>packet processing</strong>,<strong>security and privacy</strong>, <strong>big data analytics</strong>, and <strong>data center networking</strong>. </p>
+<p>分类仅供参考，下面论文列出的顺序基本按照论文集中论文的顺序。</p>
+<p>storage system：</p>
+<ol>
+<li><p>The Design, Implementation, and Deployment of a System to Transparently Compress Hundreds of Petabytes of Image Files For a File-Storage Service</p>
+</li>
+<li><p>Decibel: Isolation and Sharing in Disaggregated Rack-Scale Storage</p>
+</li>
+<li>vCorfu: A Cloud-Scale Object Store on a Shared Log</li>
+<li>Curator: Self-Managing Storage for Enterprise Clusters</li>
+</ol>
+<p>packet processing：</p>
+<ol>
+<li>Evaluating the Power of Flexible Packet Processing for Network Resource Allocation</li>
+<li>APUNet: Revitalizing GPU as Packet Processing Accelerator</li>
+</ol>
+<p>未知分类（不是上面就是下面）：</p>
+<ol>
+<li>Stateless Network Functions:Breaking the Tight Coupling of State and Processing</li>
+<li>mOS: A Reusable Networking Stack for Flow Monitoring Middleboxes</li>
+</ol>
+<p>security and privacy：</p>
+<ol>
+<li>One Key to Sign Them All Considered Vulnerable: Evaluation of DNSSEC in the Internet</li>
+<li>Enhancing Security and Privacy of Tor’s Ecosystem by using Trusted Execution Environments</li>
+<li>ViewMap: Sharing Private In-Vehicle Dashcam Videos</li>
+<li>A System to Verify Network Behavior of Known Cryptographic Clients</li>
+</ol>
+<p>未知分类（PHY）：</p>
+<ol>
+<li>FlexCore: Massively Parallel and Flexible Processing fo Large MIMO Access Points</li>
+<li>Facilitating Robust 60 GHz Network Deployment By Sensing Ambient Reflectors</li>
+<li>Skip-Correlation for Multi-Power Wireless Carrier Sensing</li>
+<li>FM Backscatter: Enabling Connected Cities and Smart Fabrics</li>
+</ol>
+<p>big data processing：</p>
+<ol>
+<li>Prio: Private, Robust, and Scalable Computation of Aggregate Statistics</li>
+<li>Opaque: An Oblivious and Encrypted Distributed Analytics Platform</li>
+<li>Splinter: Practical Private Queries on Public Data（big data and security）</li>
+</ol>
+<p>未知分类（NFV/Structure）分不明白：</p>
+<ol>
+<li><p>VFP: A Virtual Switch Platform for Host SDN in the Public Cloud</p>
+</li>
+<li><p>SCL: Simplifying Distributed SDN Control Planes</p>
+</li>
+<li><p>Robust validation of network designs under uncertain demands and failures</p>
+</li>
+</ol>
+<p>video processing（data is huge）：</p>
+<ol>
+<li><p><strong>Encoding, Fast and Slow:Low-Latency Video Processing Using Thousands of Tiny Threads</strong></p>
+</li>
+<li><p>Live Video Analytics at Scale with Approximation and Delay-Tolerance</p>
+</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li>Pytheas: Enabling Data-Driven Quality of Experience Optimization Using Group-Based Exploration-Exploitation （QoE优化）</li>
+</ol>
+<p>data center network：</p>
+<ol>
+<li>Let it Flow: Resilient Asymmetric Load Balancing with Flowlet Switching</li>
+<li>Flowtune: Flowlet Control for Datacenter Networks</li>
+<li>Flexplane: An Experimentation Platform for Resource Management in Datacenters</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li>I Can’t Believe It’s Not Causal!Scalable Causal Consistency with No Slowdown Cascades</li>
+</ol>
+<p>big data processing：</p>
+<ol>
+<li>CherryPick: Adaptively Unearthing the Best Cloud Configurations for Big Data Analytics</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li>AdaptSize: Orchestrating the Hot Object Memory Cache in a Content Delivery Network（CDN）</li>
+</ol>
+<p>IoT:</p>
+<ol>
+<li>Bringing IoT to Sports Analytics</li>
+<li>FarmBeats: An IoT Platform for Data-Driven Agriculture</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li><p>Enabling High-Quality Untethered Virtual Reality</p>
+</li>
+<li><p>Improving User Perceived Page Load Time Using Gaze </p>
+</li>
+</ol>
+<p>data center network：</p>
+<ol>
+<li>RAIL: A Case for Redundant Arrays of Inexpensive Links in Data Center Networks</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li><p>Enabling Wide-spread Communications on Optical Fabric with MegaSwitch</p>
+</li>
+<li><p>Passive Realtime Datacenter Fault Detection and Localization</p>
+</li>
+</ol>
+<p>machine learning</p>
+<ol>
+<li>Clipper: A Low-Latency Online Prediction Serving System</li>
+<li>Gaia: Geo-Distributed Machine Learning Approaching LAN Speeds</li>
+<li>TUX2: Distributed Graph Computation for Machine Learning</li>
+</ol>
+<p>未知分类：</p>
+<ol>
+<li>Efficient Memory Disaggregation with INFINISWAP (内存分页系统)</li>
+<li>Correct by Construction Networks using Stepwise Refinement（SDN）</li>
+<li>Verifying Reachability in Networks with Mutable Datapaths</li>
+<li>Automated Bug Removal for Software-Defined Networks（SDN）</li>
+<li>Delta-net: Real-time Network Verification Using Atoms</li>
+</ol>
+<h2 id="NSDI’16"><a href="#NSDI’16" class="headerlink" title="NSDI’16"></a>NSDI’16</h2><p>This year’s program features new ways to <strong>deliver content</strong>, <strong>respect user privacy</strong>,<br>improve network <strong>dependability and flexibility</strong>, and <strong>share network resources</strong>, as well as some        very exciting new <strong>wireless technologies</strong>.  </p>
+<ol>
+<li>An Industrial-Scale Software Defined Internet Exchange Point （SDN？）</li>
+<li>XFabric: A Reconfigurable In-Rack Network for Rack-Scale Computers（不懂）</li>
+<li>Be Fast, Cheap and in Control with SwitchKV（SDN/storage）</li>
+<li>Bitcoin-NG: A Scalable Blockchain Protocol（blockchain）</li>
+<li>Exploring Cross-Application Cellular Traffic Optimization with Baidu TrafficGuard（deliver content）</li>
+<li>Efficiently Delivering Online Services over Integrated Infrastructure （deliver content？）</li>
+<li>Scalable and private media consumption with Popcorn （deliver content）</li>
+<li>Speeding up Web Page Loads with Shandian （web page load）</li>
+<li>Polaris: Faster Page Loads Using Fine-grained Dependency Tracking  （web page load）</li>
+<li><strong>CFA: A Practical Prediction System for Video QoE Optimization</strong>（video QoE）</li>
+<li><strong>Passive Wi-Fi: Bringing Low Power to Wi-Fi Transmissions</strong> (wireless transmission)</li>
+<li><strong>Decimeter-Level Localization with a Single WiFi Access Point</strong> (wireless structure)</li>
+<li><strong>A Scalable Multi-User Uplink for Wi-Fi</strong> (wireless)</li>
+<li>BeamSpy: Enabling Robust 60 GHz Links Under Blockage (mmWave)</li>
+<li>Compiling Path Queries   （traffic monitoring）</li>
+<li>Simplifying Software-Defined Network Optimization Using SOL （SDN）</li>
+<li>Paving the Way for NFV: Simplifying Middlebox Modifications using StateAlyzr  （NFV）</li>
+<li>Embark: Securely Outsourcing Middleboxes to the Cloud (security)</li>
+<li>BUZZ: Testing Context-Dependent Policies in Stateful Networks  (testing framework)</li>
+<li>Minimizing Faulty Executions of Distributed Systems  (unknown)</li>
+<li>FlowRadar: A Better NetFlow for Data Centers  (monitoring tool)</li>
+<li>Sibyl: A Practical Internet Route Oracle  (unknown) </li>
+<li>VAST: A Unified Platform for Interactive Network Forensics  (unknown)</li>
+<li>Ernest: Efficient Performance Prediction for Large-Scale Advanced Analytics (unknown)</li>
+<li>Cliffhanger: Scaling Performance Cliffs in Web Memory Caches (web  cache)</li>
+<li>FairRide: Near-Optimal, Fair Cache Sharing  (cache)</li>
+<li>HUG: Multi-Resource Fairness for Correlated and Elastic Demands  (resource allocation)</li>
+<li>Consensus in a Box: Inexpensive Coordination in Hardware  (FPGA)</li>
+<li>STREAMSCOPE: Continuous Reliable Distributed Processing of Big Data Streams (distributed stream computation engine)</li>
+<li>SocialHash: an Assignment Framework for Optimizing Distributed Systems Operations on Social Networks  (Distributed Systems  social)</li>
+<li>The Design and Implementation of the Warp Transactional Filesystem  (Filesystem)</li>
+<li>BlowFish: Dynamic Storage-Performance Tradeoff in Data Stores  (data  storage)</li>
+<li>Universal Packet Scheduling (packet scheduling)</li>
+<li>Maglev: A Fast and Reliable Software Network Load Balancer  (load balance)</li>
+<li>Enabling ECN in Multi-Service Multi-Queue Data Centers (data center network )</li>
+<li>DFC: Accelerating String Pattern Matching for Network Applications  (inspect packet payloads)</li>
+<li>Diplomat: Using Delegations to Protect Community Repositories  (unknown)</li>
+<li>AnonRep: Towards Tracking-Resistant Anonymous Reputation (Reputation systems )</li>
+<li>Mind the Gap: Towards a Backpressure-Based Transport Protocol for the Tor Network (anonymous communication systems)</li>
+<li>Sieve: Cryptographically Enforced Access Control for User Data in Untrusted Clouds (data  web)</li>
+<li>Earp: Principled Storage, Sharing, and Protection for Mobile Apps (storage)</li>
+<li>iCellular: Device-Customized Cellular Network Access on Commodity Smartphones （multi-carrier access ）</li>
+<li>Diamond: Nesting the Data Center Network with Wireless Rings in 3D Space （data center network）</li>
+<li>Ripple II: Faster Communication through Physical Vibration  (physical vibration)</li>
+<li>PhyCloak: Obfuscating Sensing from Communication Signals  (security)</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/论文/" rel="tag"># 论文</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/the_way_to_search_essays_of_conferences/" rel="next" title="会议期刊以及搜索方法">
+                <i class="fa fa-chevron-left"></i> 会议期刊以及搜索方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/the_solution_of_problems/" rel="prev" title="刷题汇总（更新中）">
+                刷题汇总（更新中） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">张杰钧</p>
+              <p class="site-description motion-element" itemprop="description">张杰钧的博客，知识的积累与分享。</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NSDI‘17"><span class="nav-number">1.</span> <span class="nav-text">NSDI‘17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NSDI’16"><span class="nav-number">2.</span> <span class="nav-text">NSDI’16</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张杰钧</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

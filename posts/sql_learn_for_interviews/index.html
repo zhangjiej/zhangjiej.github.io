@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:site_name" content="张杰钧的博客">
+<meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+
+
+
+
+
+  <title>2018-04-16数据库面试相关 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张杰钧的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Life was like a box of chocolates, you never know what you're gonna get.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+
+            
+              标签
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+
+            
+              分类
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/sql_learn_for_interviews/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张杰钧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张杰钧的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2018-04-16数据库面试相关</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T15:37:43+08:00">2018-04-16</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/找工作/" itemprop="url" rel="index">
+                    <span itemprop="name">找工作</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h2><p>事务（Transaction）就是并发操作的基本单位。一个事务就是一些列操作，这些数据库操作要么全部执行，要么全部不执行，而且不会破坏数据库的一致性。其符合ACID四个特性：</p>
+<p>原子性：指事务的操作要么全部成功，要么全部失败回滚；</p>
+<p>一致性：指事务必须使数据库从一个一致性状态变换到另一个一致性状态；</p>
+<p>隔离性：多个用户并发访问数据库，每个用户的事务不会被其他事务干扰，相互隔离；</p>
+<p>持久性：事务一旦被提交，对数据库的改变就是永久性的。</p>
+<h2 id="数据库索引"><a href="#数据库索引" class="headerlink" title="数据库索引"></a>数据库索引</h2><p>索引就是对数据库表中一列或者多列值进行排序的结构。是一种帮助高效获取（查找）数据的数据结构。</p>
+<p>索引通常使用B树及其变种B+树</p>
+<p>相关链接<a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html" target="_blank" rel="noopener">http://blog.codinglabs.org/articles/theory-of-mysql-index.html</a></p>
+<p>索引的设计就是要提高数据查找速度，但是对于数据库而言，速度最大制约就是硬盘的IO速度。而索引文件有时也非常庞大，不可能全部取出放到内存中查找。因此就要设计最合适的索引结构，使得在检索索引的时候IO开销较小。</p>
+<p>对于B数，出度d可以是一个非常大的数字（超过100）而根节点常驻内存，每一次二分查找指向下一层的节点时，只需要一次IO就可以将下一层节点上的信息取出，继续进行二分查找。那么查找到最终的数据仅仅需要h次IO，这个h可以很小，通常不超过3。因此就有很好的IO性能。</p>
+<p>而红黑树这种数据结构，一是h很深，二是相邻节点之间物理地址距离很远，不适合磁盘的局部性特点。</p>
+<p>B+数更适合外存索引，是因为搜索中间节点时，搜索的仅仅是真实数据的索引，中间节点不存储数据的data域，因此可以将出度d设为很大，进一步增加了性能。（一次IO取到的数据中d更多，如果每个节点都要有个data域，那么一页的数据就会变少，d就变小）。</p>
+<p>MySQL的索引具体实现，需要和引擎联系在一起，见下一节。</p>
+<p>说一下<strong>全文索引</strong>：</p>
+<h2 id="数据库引擎（innoDB等）"><a href="#数据库引擎（innoDB等）" class="headerlink" title="数据库引擎（innoDB等）"></a>数据库引擎（innoDB等）</h2><p>MySQL中，索引是一个引擎级别的概念，必须和引擎一起讨论，不同引擎不一样的索引结构。</p>
+<p>MySQL的引擎有很多，这里主要讨论MyISAM和InnoDB。</p>
+<p><strong>二者的特点和区别概述</strong>：</p>
+<p>MyISAM：查找效率高，不支持事务，不支持外键，保存了表的具体行数（内置了一个计数器），是非聚类索引，支持全文索引。</p>
+<p>InnoDB：最新（5.5开始）MySQL的默认引擎，查找效率也不低，支持事务，支持外键，不保存表的行数，聚类索引，不支持全文索引（mysql5.6开始也支持了）。</p>
+<p>现在已经可以使用5.7版本了。。。。优秀的innoDB</p>
+<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3><p>MyISAM：表级锁。</p>
+<p>InnoDB：行级锁和表级锁，默认行级锁。（当然行级锁并发优秀，但是开销大）</p>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><p>MyISAM：可以没有主键。</p>
+<p>InnoDB：没有主键也会跟你分配一个6字节的主键。</p>
+<h3 id="MyISAM索引实现"><a href="#MyISAM索引实现" class="headerlink" title="MyISAM索引实现"></a>MyISAM索引实现</h3><p>MyISAM使用B+树的索引结构，叶节点的data域存储的是数据记录的地址。如图（图片来自上面给出的链接，侵删）</p>
+<p><img src="http://blog.codinglabs.org/uploads/pictures/theory-of-mysql-index/8.png" alt="MyISAM索引"></p>
+<p>上图是对一个数据表的主键的索引（主索引）示意图，MyISAM中的辅助索引也是这样，只不过key可以重复而已。所以查询的过程也非常清晰，对B+的根节点开始做二分，直到找到叶节点，然后遍历叶节点，找到data域，再去对应地址取数据。而这一系列操作只需要两次IO，假设索引文件很小，一次就可以取到内存中。</p>
+<p>非聚类索引仅仅是因为要和下文的聚类索引相区分才使用的。</p>
+<h3 id="InnoDB索引实现"><a href="#InnoDB索引实现" class="headerlink" title="InnoDB索引实现"></a>InnoDB索引实现</h3><p>InnoDB的索引，又称为聚类索引。当然也是用的是B+树的数据结构。但是和MyISAM有很多区别：</p>
+<p>第一，InnoDB的数据本身就是索引文件，而不是像上面的索引数据分开的结构。也就是说叶节点的data域保存的就是数据本身，中间节点的key就是主键，因此innoDB必须有主键。</p>
+<p>然后对任意一列做辅助索引，每个节点的key就是那一列的属性值，但是最后叶子节点的data域却是主键值。</p>
+<p>可以看出这种聚类索引的查找过程，如果从主索引开始还好，如果从辅助索引开始，那么第一次查找找到的是主键的值，第二次再用主键值在主索引中查找，才能找到完整的data信息（记录）。需要多一次。</p>
+<p>因此对于innoDB的数据主键，最好采用自增的字段，一是短，二是单调。这样在B+树调整结构，以及辅助索引的存储，都会很高效。</p>
+<h2 id="索引调优"><a href="#索引调优" class="headerlink" title="索引调优"></a>索引调优</h2><p><strong>联合索引</strong></p>
+<p>又称组合索引，就是将几个属性联合起来作为判断key大小的依据，对于abc的组合索引，原来的key就是a1&gt;a2就行，现在还要a1&gt;a2,或者a1=a2&amp;&amp;b1&gt;b2，或者a1=a2&amp;&amp;b1=b2&amp;&amp;c1&gt;c2。以这样的顺序判断两行记录的大小关系，也就是在索引中的前后关系。当然，abc的组合索引也是ab的组合索引也是a的单个索引。其记录在在各个索引中对应的位置是不变的。</p>
+<h2 id="非关系数据库"><a href="#非关系数据库" class="headerlink" title="非关系数据库"></a>非关系数据库</h2><p>上面所有部分均是以MySQL等为代表的关系数据库的知识，现在开始说一些非关系数据库。</p>
+<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag"># 面试</a>
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/collections_about_internet_protocols/" rel="next" title="计算机网络面试相关">
+                <i class="fa fa-chevron-left"></i> 计算机网络面试相关
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">张杰钧</p>
+              <p class="site-description motion-element" itemprop="description">张杰钧的博客，知识的积累与分享。</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">1.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库索引"><span class="nav-number">2.</span> <span class="nav-text">数据库索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎（innoDB等）"><span class="nav-number">3.</span> <span class="nav-text">数据库引擎（innoDB等）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁"><span class="nav-number">3.1.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">3.2.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyISAM索引实现"><span class="nav-number">3.3.</span> <span class="nav-text">MyISAM索引实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InnoDB索引实现"><span class="nav-number">3.4.</span> <span class="nav-text">InnoDB索引实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引调优"><span class="nav-number">4.</span> <span class="nav-text">索引调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系数据库"><span class="nav-number">5.</span> <span class="nav-text">非关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis"><span class="nav-number">5.1.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcached"><span class="nav-number">5.2.</span> <span class="nav-text">Memcached</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张杰钧</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

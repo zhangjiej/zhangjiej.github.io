@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:site_name" content="张杰钧的博客">
+<meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+
+
+
+
+
+  <title>压缩感知简介 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">张杰钧的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Life was like a box of chocolates, you never know what you're gonna get.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+
+            
+              标签
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+
+            
+              分类
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/compressive_sensing_introduction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张杰钧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张杰钧的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">压缩感知简介</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-05T00:00:00+08:00">2018-01-05</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/压缩感知/" itemprop="url" rel="index">
+                    <span itemprop="name">压缩感知</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/压缩感知/基本概念/" itemprop="url" rel="index">
+                    <span itemprop="name">基本概念</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-压缩感知"><a href="#1-压缩感知" class="headerlink" title="1. 压缩感知"></a>1. 压缩感知</h2><blockquote>
+<p>整个压缩感知体系是由Emmanuel Candés、Justin Romberg、Terence Tao和David Donoho建立的。</p>
+</blockquote>
+<p>压缩感知理论指出稀疏的或具有系数表达的有限维数的信号可以利用远小于奈奎斯特采样数量的线性、非自适应的测量值无失真的重建出来。该理论一经提出，便在信息论、信号/图像处理、医疗成像、射电天文、模式识别、光学/雷达成像和信道编码等诸多领域引起广泛关注。<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<h3 id="1-1-压缩感知的数学模型"><a href="#1-1-压缩感知的数学模型" class="headerlink" title="1.1 压缩感知的数学模型"></a>1.1 压缩感知的数学模型</h3><p>首先介绍压缩感知的数学模型。对于一个一维信号$x∈R^N$，$x$中只包含$K$个非零元素。假设通过一个测量矩阵$Φ$获取$M$个线性测量值，即可通过下面的数学模型描述整个采样过程:</p>
+<script type="math/tex; mode=display">
+y = Φx \tag1</script><p>其中，$Φ$是一个大小为$M×N$的矩阵，$y$是采样得到的测量值，$y∈R^M$ 。可以看到矩阵$Φ$实际上表示了一个降维的投影操作，将$R^N$映射到$R^M$中，一般来说，矩阵$Φ$的列数远多于行数，即$K&lt;M≪N$。矩阵$Φ$又被称为测量矩阵。这种数学模型就是对压缩感知框架的基本描述。<br>在现实世界中，很多实际的目标信号本身并不具有稀疏性。但是往往会在某个正交变换域中或者某个稀疏字典$Ψ$中具有稀疏性。例如，自然图像通常会在小波域中表现出稀疏特性。<br>为了增加压缩感知信号处理的普适性，尽管目标信号$x$本身不具有稀疏性，但是它在变换域Ψ中能体现出稀疏性，即$x=Ψs$，其中$s$信号具有较少的非零元素。矩阵$Ψ$被称为稀疏基矩阵。压缩感知方程这时可以表示为:</p>
+<script type="math/tex; mode=display">
+y = ΦΨs \tag2</script><p><img src="http://p2l5ojacr.bkt.clouddn.com/18-1-15/32125393.jpg" alt="压缩感知模型"></p>
+<p>假设合并矩阵$Φ$与$Ψ$，即$Θ=ΦΨ$。矩阵$Θ∈R^{M×N}$称为传感矩阵。那么压缩感知的数学模型最终可以表述为:</p>
+<script type="math/tex; mode=display">
+y = Θs \tag3</script><p>对于$ (1) $式，显然是一个欠定的方程组。在已知$y$和$Φ$的情况下常规方法是无法求解$x$的（要么有无穷多个解，要么无解）。在压缩感知体系下，如果满足两个前提条件，就可以近似恢复出原始信号$x$。</p>
+<ol>
+<li>原始信号$x$是稀疏的或者可压缩的。</li>
+<li>测量矩阵$Φ$或者传感矩阵$Θ$满足RIP。</li>
+</ol>
+<h3 id="1-2-约束等距特性RIP"><a href="#1-2-约束等距特性RIP" class="headerlink" title="1.2 约束等距特性RIP"></a>1.2 约束等距特性RIP</h3><p>整个压缩感知体系中有两个重要的问题。第一个就是如何构建合适的测量矩阵$ Φ $， 使得它在压缩采样过程中能能够保留目标信号$x$的主要信息。<br>E. Candés和T.Tao在2005年引入了约束等距特性<sup><a href="#fn_2" id="reffn_2">2</a></sup>（restricted isometry property，RIP），用来描述现实环境中稀疏信号x可重构的条件，即测量矩阵Φ需要满足的充分条件。首先给出K阶约束等距特性的定义。</p>
+<p>定义1： 如果存在$ \delta _k \in \left( 0,1\right) $，使得</p>
+<script type="math/tex; mode=display">
+\left( 1-\delta _{k}\right) \left\| x\right\| ^{2}_{ℓ_{2}}\leq \left\| \Phi x\right\| ^{2}_{ℓ_{2}}\leq \left( 1+\delta _{k}\right) \left\| x\right\| ^{2}_{ℓ_{2}} \tag4</script><p>对所有$K$阶稀疏向量$x$都成立，则称矩阵$\Phi$满足$K$阶约束等距特性。其中最小的$ \delta _k $称为约束等距常数RIC。<br>如果对于任意$K$阶稀疏信号$x_1$和$x_2$，其差值$x_1-x_2$是$2K$稀疏的，如果满足测量矩阵$Φ$满足</p>
+<script type="math/tex; mode=display">
+\left( 1-\delta _{2k}\right) \left\| x_1-x_2 \right\| ^{2}_{ℓ_{2}}\leq \left\| \Phi x_1-x_2 \right\| ^{2}_{ℓ_{2}}\leq \left( 1+\delta _{2k}\right) \left\| x_1-x_2 \right\| ^{2}_{ℓ_{2}} \tag5</script><p>就保证了不会出现不同的$x_1$与$x_2$，他们的观测值$Φx_1$与$Φx_2$相同的情况，即保证了测量值完全保持了原信号的特性。所以，矩阵满足$2K$阶RIP保证了能够把任意一个$K$稀疏信号$x$映射为唯一的$y$。</p>
+<p>判断一个矩阵具有RIP特性或者确定其的RIC常数很难计算，导致无法在实际中使用该规则判断一个测量矩阵是否满足条件。Richard Barniuk<sup><a href="#fn_3" id="reffn_3">3</a></sup>给出了RIP的等价条件。首先给出相关性与相关系数的定义。<br>定义2： 考虑一个字典$Θ=[ΦΨ]$, $Φ$和$Ψ$均是$n×n$的正交基，$μ(Φ,Ψ)$是相关系数，定义为：</p>
+<script type="math/tex; mode=display">
+\mu \left( \Phi ,\Psi \right) =\sqrt {n}\max _{i\leq k,j\leq n}\left| <\phi_k \psi_j >\right| \tag6</script><p>$μ(Φ,Ψ)∈[1,√n]$且$μ(Φ,Ψ)$越小，就表式越不相关。正交矩阵的相关系数为1，如果$μ(Φ,Ψ)=1$则表示$Φ$和$Ψ$不相关。<br>Richard Barniuk给出的RIP等价条件是，在目标信号$x$在经过某个稀疏变换$Ψ$后的信号是稀疏的前提下，传感矩阵$Θ=ΦΨ$满足RIP条件等价于$Φ$和$Ψ$不相关。或者表述为二者高度不相关，即$μ(Φ,Ψ)$接近1的时候，传感矩阵$Θ$很大概率上满足RIP条件。由于一定信号的稀疏基往往是固定的，RIP条件的满足就通过寻找合适的测量矩阵$Φ$来完成。<br>压缩感知采样是否存在普适的测量矩阵？E. Candés和T.Tao 证明了独立同分布的高斯随机测量矩阵<sup><a href="#fn_4" id="reffn_4">4</a></sup>可以作为普适的压缩感知测量矩阵，其与绝大多数稀疏基矩阵均是不相关的。但是高斯矩阵需要较大的存储空间。在现在图像的压缩采样中，也经常采用扰乱和分块的哈达玛矩阵（Scrambled Block Hadamard Ensemble, SBHE）或者结构化的随机矩阵（Structurally Random Matrices，SRM）作为测量矩阵。</p>
+<p><strong>参考文献：</strong></p>
+<blockquote id="fn_1">
+<sup>1</sup>. 压缩感知浅析 李峰 郭毅 著 科学出版社 2015年10月第一版<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. E. J. Candes and T. Tao, “Decoding by linear programming,” <em>IEEE Trans. Inf. Theory</em>, vol. 51, no. 12, pp. 4203–4215, 2005<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. R. Baraniuk, M. Davenport, R. DeVore, and M. Wakin, “A simple proof of the restricted isometry property for random matrices,” <em>Constr. Approx.</em>, vol. 28, no. 3, pp. 253–263, 2008.<a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_4">
+<sup>4</sup>. E. J. Candès, J. K. Romberg, and T. Tao, “Stable signal recovery from incomplete and inaccurate measurements,” <em>Commun. Pure Appl. Math.</em> ,vol. 59, no. 8, pp. 1207–1223, 2006.<a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#8617;</a>
+</blockquote>
+<p><strong>参考链接：</strong></p>
+<p><a href="https://zhuanlan.zhihu.com/p/22445302" target="_blank" rel="noopener">形象易懂讲解算法II——压缩感知</a></p>
+<p><a href="">[转载]压缩感知（Compressive Sensing）</a></p>
+<p><a href="http://blog.csdn.net/jbb0523/article/details/44565647" target="_blank" rel="noopener">压缩感知测量矩阵之有限等距性质（Restricted Isometry Property, RIP）</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/压缩感知/" rel="tag"># 压缩感知</a>
+          
+            <a href="/tags/RIP/" rel="tag"># RIP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/launch_blog_with_hexo_windows/" rel="next" title="使用hexo搭建博客（windows）">
+                <i class="fa fa-chevron-left"></i> 使用hexo搭建博客（windows）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/use_mathjax_in_hexo/" rel="prev" title="hexo博客数学公式显示">
+                hexo博客数学公式显示 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">张杰钧</p>
+              <p class="site-description motion-element" itemprop="description">张杰钧的博客，知识的积累与分享。</p>
+          </div>
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-压缩感知"><span class="nav-number">1.</span> <span class="nav-text">1. 压缩感知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-压缩感知的数学模型"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 压缩感知的数学模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-约束等距特性RIP"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 约束等距特性RIP</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张杰钧</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
