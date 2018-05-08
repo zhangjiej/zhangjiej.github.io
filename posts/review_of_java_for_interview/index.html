@@ -77,14 +77,14 @@
 
 <meta name="description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://zhangjiej.github.io/tags/index.html">
 <meta property="og:site_name" content="张杰钧的博客">
 <meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta property="og:updated_time" content="2018-01-11T07:48:08.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="tags">
 <meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
 
 
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+  <link rel="canonical" href="http://zhangjiej.github.io/tags/"/>
 
 
 
@@ -528,12 +528,20 @@
 <p>sleep()睡眠时，保持对象锁，仍然占有该锁；而wait()睡眠时，释放对象锁。</p>
 <p>wait()使用notify或者notifyAlll或者指定睡眠时间来唤醒当前等待池中的线程。</p>
 <p><strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
-<h3 id="Synchronized-（同步）关键字-："><a href="#Synchronized-（同步）关键字-：" class="headerlink" title="Synchronized （同步）关键字 ："></a>Synchronized （同步）关键字 ：</h3><p>同步 可以是同步代码块，也可以同步一个函数。</p>
+<h3 id="Java内存模型-JMM"><a href="#Java内存模型-JMM" class="headerlink" title="Java内存模型 JMM"></a>Java内存模型 JMM</h3><h3 id="Synchronized-（同步）关键字-："><a href="#Synchronized-（同步）关键字-：" class="headerlink" title="Synchronized （同步）关键字 ："></a>Synchronized （同步）关键字 ：</h3><p>同步 可以是同步代码块，也可以同步一个函数。</p>
 <p>synchronized（this）{}指的是这段代码使用对象。</p>
 <p>synchronized（Object）{}指的就是Object这个对象。其实两者可以是一样的</p>
 <p>上面两种情况就是要是想运行{}内部的代码，必须获得this:调用这段代码的对象的锁，或者Object这个对象的锁。</p>
 <p>如果synchronized后面修饰的是方法或者静态变量。对于修饰静态变量就是对于这整个类的所有实例都要申请同一把锁来使用这个静态变量。而修饰方法则是对每个类实例的方法，都有一把锁，要使用这个实例的方法，就要先申请锁才能调用这个方法。</p>
-<h3 id="CAS与乐观锁"><a href="#CAS与乐观锁" class="headerlink" title="CAS与乐观锁"></a>CAS与乐观锁</h3>
+<h3 id="Volatile-关键字"><a href="#Volatile-关键字" class="headerlink" title="Volatile 关键字"></a>Volatile 关键字</h3><p>原子性 可见性 有序性</p>
+<p>原子性就是操作不可分，要么全部执行，要么全部不执行。</p>
+<p>i++就是一个可分的操作， 赋值操作就是一个不可分的操作</p>
+<p>可见性就是一个线程对数据的改变可以立刻看得见。</p>
+<p>java中每个线程都有自己的线程栈，每次操作数据的时候，先把数据拷贝一份到自己的线程栈，然后再进行操作，最后将修改后的数据写回内存。</p>
+<p>volatile关键字就是保证数据的可见性的。</p>
+<p>有序性指程序执行的顺序就是按照写代码的顺序执行，单线程改变顺序一般不会有不良后果，因为要保证程序的正确性。而多线程下，程序正确也可能会出错，因为两个线程的顺序可能不一致。</p>
+<p>volatile就是保证了可见性和一定程度的有序性，不能保证原子性。</p>
+<h3 id="CAS与乐观锁"><a href="#CAS与乐观锁" class="headerlink" title="CAS与乐观锁"></a>CAS与乐观锁</h3><h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3>
       
     </div>
     
@@ -674,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet"><span class="nav-number">1.</span> <span class="nav-text">servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSM"><span class="nav-number">3.</span> <span class="nav-text">SSM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">4.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC"><span class="nav-number">5.</span> <span class="nav-text">JDBC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类与接口"><span class="nav-number">6.</span> <span class="nav-text">抽象类与接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">7.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装、多态与继承"><span class="nav-number">8.</span> <span class="nav-text">封装、多态与继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">9.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMvc"><span class="nav-number">10.</span> <span class="nav-text">SpringMvc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-runtimeException子类"><span class="nav-number">11.1.</span> <span class="nav-text">1. runtimeException子类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-IOException"><span class="nav-number">11.2.</span> <span class="nav-text">2.IOException</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-其他"><span class="nav-number">11.3.</span> <span class="nav-text">3. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常的抛出和异常的捕获"><span class="nav-number">11.4.</span> <span class="nav-text">异常的抛出和异常的捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch-final"><span class="nav-number">11.5.</span> <span class="nav-text">try catch final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传值还是传引用"><span class="nav-number">11.6.</span> <span class="nav-text">传值还是传引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return-返回的顺序"><span class="nav-number">11.7.</span> <span class="nav-text">return 返回的顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展：错误和异常的区别-Error-vs-Exception"><span class="nav-number">11.8.</span> <span class="nav-text">扩展：错误和异常的区别(Error vs Exception)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程-1"><span class="nav-number">12.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的创建"><span class="nav-number">12.1.</span> <span class="nav-text">线程的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start和Run方法"><span class="nav-number">12.2.</span> <span class="nav-text">Start和Run方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和wait-的区别"><span class="nav-number">12.3.</span> <span class="nav-text">sleep()和wait()的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synchronized-（同步）关键字-："><span class="nav-number">12.4.</span> <span class="nav-text">Synchronized （同步）关键字 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS与乐观锁"><span class="nav-number">12.5.</span> <span class="nav-text">CAS与乐观锁</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet"><span class="nav-number">1.</span> <span class="nav-text">servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">2.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSM"><span class="nav-number">3.</span> <span class="nav-text">SSM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">4.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC"><span class="nav-number">5.</span> <span class="nav-text">JDBC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类与接口"><span class="nav-number">6.</span> <span class="nav-text">抽象类与接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">7.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装、多态与继承"><span class="nav-number">8.</span> <span class="nav-text">封装、多态与继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">9.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMvc"><span class="nav-number">10.</span> <span class="nav-text">SpringMvc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常"><span class="nav-number">11.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-runtimeException子类"><span class="nav-number">11.1.</span> <span class="nav-text">1. runtimeException子类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-IOException"><span class="nav-number">11.2.</span> <span class="nav-text">2.IOException</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-其他"><span class="nav-number">11.3.</span> <span class="nav-text">3. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常的抛出和异常的捕获"><span class="nav-number">11.4.</span> <span class="nav-text">异常的抛出和异常的捕获</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-catch-final"><span class="nav-number">11.5.</span> <span class="nav-text">try catch final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#传值还是传引用"><span class="nav-number">11.6.</span> <span class="nav-text">传值还是传引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return-返回的顺序"><span class="nav-number">11.7.</span> <span class="nav-text">return 返回的顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展：错误和异常的区别-Error-vs-Exception"><span class="nav-number">11.8.</span> <span class="nav-text">扩展：错误和异常的区别(Error vs Exception)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程-1"><span class="nav-number">12.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的创建"><span class="nav-number">12.1.</span> <span class="nav-text">线程的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Start和Run方法"><span class="nav-number">12.2.</span> <span class="nav-text">Start和Run方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-和wait-的区别"><span class="nav-number">12.3.</span> <span class="nav-text">sleep()和wait()的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java内存模型-JMM"><span class="nav-number">12.4.</span> <span class="nav-text">Java内存模型 JMM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synchronized-（同步）关键字-："><span class="nav-number">12.5.</span> <span class="nav-text">Synchronized （同步）关键字 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Volatile-关键字"><span class="nav-number">12.6.</span> <span class="nav-text">Volatile 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CAS与乐观锁"><span class="nav-number">12.7.</span> <span class="nav-text">CAS与乐观锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程池"><span class="nav-number">12.8.</span> <span class="nav-text">线程池</span></a></li></ol></li></ol></div>
             
 
           </div>

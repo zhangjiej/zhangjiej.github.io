@@ -77,14 +77,14 @@
 
 <meta name="description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://zhangjiej.github.io/tags/index.html">
 <meta property="og:site_name" content="张杰钧的博客">
 <meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T07:18:18.000Z">
+<meta property="og:updated_time" content="2018-01-11T07:48:08.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="tags">
 <meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
 
 
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
+  <link rel="canonical" href="http://zhangjiej.github.io/tags/"/>
 
 
 
@@ -382,7 +382,7 @@
 <p>因此对于innoDB的数据主键，最好采用自增的字段，一是短，二是单调。这样在B+树调整结构，以及辅助索引的存储，都会很高效。</p>
 <h2 id="索引调优"><a href="#索引调优" class="headerlink" title="索引调优"></a>索引调优</h2><p><strong>联合索引</strong></p>
 <p>又称组合索引，就是将几个属性联合起来作为判断key大小的依据，对于abc的组合索引，原来的key就是a1&gt;a2就行，现在还要a1&gt;a2,或者a1=a2&amp;&amp;b1&gt;b2，或者a1=a2&amp;&amp;b1=b2&amp;&amp;c1&gt;c2。以这样的顺序判断两行记录的大小关系，也就是在索引中的前后关系。当然，abc的组合索引也是ab的组合索引也是a的单个索引。其记录在在各个索引中对应的位置是不变的。</p>
-<h2 id="非关系数据库"><a href="#非关系数据库" class="headerlink" title="非关系数据库"></a>非关系数据库</h2><p>上面所有部分均是以MySQL等为代表的关系数据库的知识，现在开始说一些非关系数据库。</p>
+<h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><h2 id="非关系数据库"><a href="#非关系数据库" class="headerlink" title="非关系数据库"></a>非关系数据库</h2><p>上面所有部分均是以MySQL等为代表的关系数据库的知识，现在开始说一些非关系数据库。</p>
 <h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3>
       
     </div>
@@ -522,7 +522,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">1.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库索引"><span class="nav-number">2.</span> <span class="nav-text">数据库索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎（innoDB等）"><span class="nav-number">3.</span> <span class="nav-text">数据库引擎（innoDB等）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁"><span class="nav-number">3.1.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">3.2.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyISAM索引实现"><span class="nav-number">3.3.</span> <span class="nav-text">MyISAM索引实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InnoDB索引实现"><span class="nav-number">3.4.</span> <span class="nav-text">InnoDB索引实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引调优"><span class="nav-number">4.</span> <span class="nav-text">索引调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系数据库"><span class="nav-number">5.</span> <span class="nav-text">非关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis"><span class="nav-number">5.1.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcached"><span class="nav-number">5.2.</span> <span class="nav-text">Memcached</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">1.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库索引"><span class="nav-number">2.</span> <span class="nav-text">数据库索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎（innoDB等）"><span class="nav-number">3.</span> <span class="nav-text">数据库引擎（innoDB等）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁"><span class="nav-number">3.1.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">3.2.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyISAM索引实现"><span class="nav-number">3.3.</span> <span class="nav-text">MyISAM索引实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InnoDB索引实现"><span class="nav-number">3.4.</span> <span class="nav-text">InnoDB索引实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引调优"><span class="nav-number">4.</span> <span class="nav-text">索引调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句"><span class="nav-number">5.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系数据库"><span class="nav-number">6.</span> <span class="nav-text">非关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis"><span class="nav-number">6.1.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcached"><span class="nav-number">6.2.</span> <span class="nav-text">Memcached</span></a></li></ol></li></ol></div>
             
 
           </div>
