@@ -383,7 +383,20 @@
 <h2 id="索引调优"><a href="#索引调优" class="headerlink" title="索引调优"></a>索引调优</h2><p><strong>联合索引</strong></p>
 <p>又称组合索引，就是将几个属性联合起来作为判断key大小的依据，对于abc的组合索引，原来的key就是a1&gt;a2就行，现在还要a1&gt;a2,或者a1=a2&amp;&amp;b1&gt;b2，或者a1=a2&amp;&amp;b1=b2&amp;&amp;c1&gt;c2。以这样的顺序判断两行记录的大小关系，也就是在索引中的前后关系。当然，abc的组合索引也是ab的组合索引也是a的单个索引。其记录在在各个索引中对应的位置是不变的。</p>
 <h2 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h2><h2 id="非关系数据库"><a href="#非关系数据库" class="headerlink" title="非关系数据库"></a>非关系数据库</h2><p>上面所有部分均是以MySQL等为代表的关系数据库的知识，现在开始说一些非关系数据库。</p>
-<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3>
+<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><blockquote>
+<p>   redis单例提供了一种数据缓存方式和丰富的数据操作api，但是将数据完全存储在单个redis中主要存在两个问题：数据备份和数据体量较大造成的性能降低。这里redis的主从模式为这两个问题提供了一个较好的解决方案。主从模式指的是使用一个redis实例作为主机，其余的实例作为备份机。主机和从机的数据完全一致，主机支持数据的写入和读取等各项操作，而从机则只支持与主机数据的同步和读取，也就是说，客户端可以将数据写入到主机，由主机自动将数据的写入操作同步到从机。主从模式很好的解决了数据备份问题，并且由于主从服务数据几乎是一致的，因而可以将写入数据的命令发送给主机执行，而读取数据的命令发送给不同的从机执行，从而达到读写分离的目的。</p>
+</blockquote>
+<p>redis的主从模式：一个主机多个从机，主机只负责数据的写入和读取，而从机负责向主机同步数据以及数据的读取，这样在读取时可以提高性能，实现读写分离。也可以方便的支持数据的迁移。</p>
+<p>支持多种类型：string hash set zset List</p>
+<p>两种持久化： RDB和AOF</p>
+<p>RDB：RDB方式，是将redis某一时刻的数据持久化到磁盘中，是一种快照式的持久化方法。</p>
+<p>AOF：AOF方式是将执行过的写指令记录下来，在数据恢复时按照从前到后的顺序再将指令都执行一遍。</p>
+<p>AOF的效果好但是RDB效率高。RDB会有数据的遗失</p>
+<h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3><h2 id="E-R图以及转换关系模型"><a href="#E-R图以及转换关系模型" class="headerlink" title="E-R图以及转换关系模型"></a>E-R图以及转换关系模型</h2><p>方框表示实体，椭圆表示属性，实体之间的联系用菱形（一个或者多个）表示，菱形可以表示出1:1，1:n，m:n等关系。转换为关系模型时注意：</p>
+<p>1:1的关系只需要将一个主键作为另一个外键即可。</p>
+<p>1:n的关系是需要将1的主键作为n方的外键。</p>
+<p>m:n的关系比较复杂，需要单独将每一个，m方和n方的主键都存在一条记录里，如果需要还需要保存联系的名称。比如用户对某个对象的操作。可以是多个用户对多个对象进行操作，操作类型还可以有注册，删除，增加等等。</p>
+
       
     </div>
     
@@ -526,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">1.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库索引"><span class="nav-number">2.</span> <span class="nav-text">数据库索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎（innoDB等）"><span class="nav-number">3.</span> <span class="nav-text">数据库引擎（innoDB等）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁"><span class="nav-number">3.1.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">3.2.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyISAM索引实现"><span class="nav-number">3.3.</span> <span class="nav-text">MyISAM索引实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InnoDB索引实现"><span class="nav-number">3.4.</span> <span class="nav-text">InnoDB索引实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引调优"><span class="nav-number">4.</span> <span class="nav-text">索引调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句"><span class="nav-number">5.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系数据库"><span class="nav-number">6.</span> <span class="nav-text">非关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis"><span class="nav-number">6.1.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcached"><span class="nav-number">6.2.</span> <span class="nav-text">Memcached</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">1.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库索引"><span class="nav-number">2.</span> <span class="nav-text">数据库索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎（innoDB等）"><span class="nav-number">3.</span> <span class="nav-text">数据库引擎（innoDB等）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁"><span class="nav-number">3.1.</span> <span class="nav-text">锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">3.2.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyISAM索引实现"><span class="nav-number">3.3.</span> <span class="nav-text">MyISAM索引实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#InnoDB索引实现"><span class="nav-number">3.4.</span> <span class="nav-text">InnoDB索引实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引调优"><span class="nav-number">4.</span> <span class="nav-text">索引调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句"><span class="nav-number">5.</span> <span class="nav-text">SQL语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系数据库"><span class="nav-number">6.</span> <span class="nav-text">非关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis"><span class="nav-number">6.1.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memcached"><span class="nav-number">6.2.</span> <span class="nav-text">Memcached</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R图以及转换关系模型"><span class="nav-number">7.</span> <span class="nav-text">E-R图以及转换关系模型</span></a></li></ol></div>
             
 
           </div>
