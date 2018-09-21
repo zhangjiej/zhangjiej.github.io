@@ -123,7 +123,7 @@
 
 
 
-  <title>6月面试学习记录 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>秋招面试复习 | 张杰钧的博客</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/note_of_interview_in_june/">
+    <link itemprop="mainEntityOfPage" href="http://zhangjiej.github.io/posts/autumn_recruitment_interview_review/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张杰钧">
@@ -277,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">6月面试学习记录</h1>
+          <h1 class="post-title" itemprop="name headline">秋招面试复习</h1>
         
 
         <div class="post-meta">
@@ -289,7 +289,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T10:49:02+08:00">2018-06-01</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T20:29:17+08:00">2018-09-10</time>
             
 
             
@@ -347,8 +347,43 @@
       
 
       
-        <h2 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h2><p>mapper的接口开始需要我们自己写mapper接口（每个pojo一个）然后自己写mapper.xml。在里面定义sql语句。注意接口中方法的名字要和mapper.xml中每个sql的id相同；输入参数要和parametType类型相同；输出参数要和resultType相同。</p>
-<p>原理利用动态代理，mybatis自动生成mapper接口的动态代理对象（实现了mapper接口），然后将mapper.xml中的sql语句信息和接口中的方法实现了映射。我们就可以通过调用生成的动态代理对象的方法来实现sql操作。</p>
+        <h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>大家好，我是XX号面试者，是一名研三的应届生，就读于北京邮电大学，网络技术研究院，专业是计算机科学与技术。本科也就读于北邮，专业是电子科学与技术。今年暑期我在字节跳动，今日头条实习，负责APP服务端的开发，负责日常需求的迭代，参与了很多方案设计与bug修复。因此对后台开发的流程和架构有一些经验。在学校主要研究网络架构和优化，毕业论文的方向就是无线流媒体传输层的优化，因此对网络协议和技术也有一定的了解。当然，我经历过考研，对计算机基础也是有一定了解。我比较熟悉的语言是java。在团队中，我喜欢主动承担责任，主动推动任务进度去完成任务。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>1.排序算法</p>
+<p>堆排序：</p>
+<p>建堆和调整:</p>
+<p>首先按照数组的顺序构建完全二叉树，即每一个序号为n的节点，其左孩子是2n+1 有节点是2n+2 （根节点的序号是0）</p>
+<p>然后从最后一个非叶子结点开始调整，调整的范围是以该节点为根节点形成的子树。</p>
+<p><img src="https://camo.githubusercontent.com/40a3a702c3429b95d119d1118626fd17617db88a/687474703a2f2f7374617469632e636f646563656f2e636f6d2f696d616765732f323031362f30332f61643337336135383931383264643162376534343339313563383737356663642e706e67" alt=""></p>
+<p>网上借来的图片，数组A为49,38,65,97,76,13,27,49，目标是组成小根堆（a）是直接按照数组顺序构造的完全二叉树，</p>
+<p>第一步的调整就是从序号N/2的节点开始，即97节点，调整的范围是97和49构成的子树。调整的方法是选根节点左孩子节点以及右孩子节点中最小（大）的和根节点交换。因此调整的结果是97和49交换。形成了（b）。</p>
+<p>之后如果某一个孩子节点和根节点交换之后，以该孩子节点为根节点形成的子树可能会被破坏规则。</p>
+<p>比如下一个调整的节点是65节点，调整之后它和他的左孩子节点13交换。在调整38节点，它不需要交换。在调整最上面的49节点，首先要和13交换，这时，原来以13节点的为根节点的子树的规则被破坏了。因此，交换之后，要递归对交换节点之后的子树做一次调整。也就是某个孩子节点和根节点交换了，递归调整该孩子节点下面的子树。因此对于图中49的节点和13节点交换之后还要再对子树进行调整，49节点再和27节点减交换，完成下沉。</p>
+<p>形成（e）。</p>
+<p>然后排序的过程很简单，从最上面的根节点取出保存，该节点是最大（小）的值，再将序号最大的节点放在根节点的位置上，即A[0]= A[N] N=N-1 之后根节点就破坏了堆的性质，于是从根节点开始调整，将根节点一步一步下沉，调整。因为最多只需要交换的次数就是数的高度。将根节点下降到叶子节点。因此时间复杂度每一次为logN</p>
+<h3 id="linux系统"><a href="#linux系统" class="headerlink" title="linux系统"></a>linux系统</h3><h3 id="海量数据"><a href="#海量数据" class="headerlink" title="海量数据"></a>海量数据</h3><hr>
+<p>Socket 是应用层和传输层之间的一个抽象层，它将 TCP/IP 的复杂操作抽象为几个简单的借口供应用层调用，以实现进程在网络之间的通信<br>而进程网络通信间的唯一标志则是 ip 地址+传输协议+端口号</p>
+<p>Thrift 序列化的协议：JSON Protobuf Avro Binary Compact<br>Compact : 一种序列化规范<br>Binary: 二进制码</p>
+<p>对照这个模型，Thrift的核心组件有：<br>TProtocol 协议和编解码组件<br>TTransport 传输组件<br>TProcessor 服务调用组件<br>TServer，Client 服务器和客户端组件<br>IDL 服务描述组件，负责生产跨平台客户端</p>
+<p>thrift，有自己的网络通信框架+thrift 对象序列化协议+thrift 调用控制协议</p>
+<p>Rpc remote procedrue call 远程过程调用 目的是通过网络通信向远程计算机上请求服务，调用函数，就像调用本机上的函数一样，而不必关心实现的细节。请求服务也可以理解成进程之间的数据交换</p>
+<p>一般 RPC 框架也是由三部分组成，<br>最底层的就是网络通信，一般都是用 tcp 协议<br>网络通信之上就是编解码或者序列换反序列化的协议，用来将网络中传输的字节流，转化为对应的内存中的表达方式<br>再往上就是如何将这些网络传输的信息通过本地调用进行相应的处理，获取返回值。thrift 中的表述是从数据流中读数据和向数据流中写数据。</p>
+<p>一般 RPC 都有服务端和 客户端<br>其实就是对应上面的描述做一个功能的集合，客户端用于发起请求，服务端用于处理请求<br>当然这种模式只支持请求，无法支持推送 push 的功能。</p>
+<p>Rpc 框架同时也要提供高并发，长链接，分布式，异步通信，大数据量等等特性，根据框架不同实现的效果也不同</p>
+<p>负载均衡 服务发现 连接池（长链接 短连接） 令牌桶  golang本地缓存</p>
+<p>服务发现与心跳机制<br>通过 PSM 名称调用 Consul 的 HTTP 接口，可以获得 PSM 对应服务所有节点的 IP 和 Port，进而可以获取 Thrift 和 DB 等服务。通过实验，当前不同机房的 PSM 是不打通的。<br>Kite 框架中完成了服务注册 到 服务发现的过程<br>服务发现： 在第一次调用call方法的时候初始化各个中间件，其中就有服务发现的中间件，获取 rpc 的信息，具体发现是使用本地缓存，并定义 fether，通过 http get 向 consul 服务器获取对应服务的 ip 和端口号</p>
+<p>心跳机制，心跳机制用于检测对方是否正常工作，客户端定向向服务端发送心跳检测包，用于告诉服务端我还在工作。到底是客户端还是服务端发送心跳检测包，视情况而定，一般处于效率的考虑，是客户端发送。</p>
+<p>长链接与短连接：<br>HTTP 的长链接与短连接本质上是 TCP 的长链接与短连接，是 HTTP1.1起默认使用长链接，Connection:keep-alive，在响应头就会出现上述代码。<br>长链接的每次 HTTP 请求之后不会断开 TCP连接，</p>
+<p>HTTP2.0 二进制分帧，多路复用即多重的请求响应消息，首部压缩，服务端推送</p>
+<p>Etcd 一致性分布式键值系统，用于共享配置和服务发现</p>
+<p>多线程 与 线程池</p>
+<p>java 多线程：<br>线程的创建，几个函数的功能：wait notify join sleep start run interrupt<br>线程的同步： 锁 synchronized   数据同步：volatile</p>
+<p>Docker 一种容器，实现了类似于虚拟机的功能，是一种新的虚拟化方式<br>Docker 包括三个基本概念</p>
+<ul>
+<li>镜像（Image）</li>
+<li>容器（Container）</li>
+<li>仓库（Repository）</li>
+</ul>
+<p>git</p>
 
       
     </div>
@@ -366,7 +401,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mybatis/" rel="tag"># mybatis</a>
+            <a href="/tags/面试/" rel="tag"># 面试</a>
           
         </div>
       
@@ -379,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/sql_learn_for_interviews/" rel="next" title="数据库面试相关">
-                <i class="fa fa-chevron-left"></i> 数据库面试相关
+              <a href="/posts/Java_multithread_summary/" rel="next" title="java多线程总结">
+                <i class="fa fa-chevron-left"></i> java多线程总结
               </a>
             
           </div>
@@ -388,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/posts/Java_multithread_summary/" rel="prev" title="java多线程总结">
-                java多线程总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mybatis"><span class="nav-number">1.</span> <span class="nav-text">mybatis</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux系统"><span class="nav-number">3.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海量数据"><span class="nav-number">4.</span> <span class="nav-text">海量数据</span></a></li></ol></div>
             
 
           </div>
