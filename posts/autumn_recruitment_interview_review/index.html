@@ -77,14 +77,14 @@
 
 <meta name="description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://zhangjiej.github.io/tags/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
 <meta property="og:site_name" content="张杰钧的博客">
 <meta property="og:description" content="张杰钧的博客，知识的积累与分享。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-11T07:48:08.244Z">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。">
 
 
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://zhangjiej.github.io/tags/"/>
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
 
 
 
@@ -384,6 +384,105 @@
 <li>仓库（Repository）</li>
 </ul>
 <p>git</p>
+<hr>
+<h3 id="MQ消息队列"><a href="#MQ消息队列" class="headerlink" title="MQ消息队列"></a>MQ消息队列</h3><p>上下游通信机制，实现逻辑解耦和物理解耦，是一种跨进程通信的方式</p>
+<p>缺点：</p>
+<ul>
+<li>系统复杂，多了一个MQ组件</li>
+<li>消息传递时延增加</li>
+<li>可靠性和重复性相互制约</li>
+<li>上游无法得知下游的执行结果（关键）</li>
+</ul>
+<p>因此调用方如果依赖调用的结果执行判断，不能使用消息队列</p>
+<h3 id="高并发场景"><a href="#高并发场景" class="headerlink" title="高并发场景"></a>高并发场景</h3><p>业务难题：</p>
+<p>高负载，并发量大，此时网络带宽负载高，而且尤其是数据库，在多个用户请求下，进程数增加，上下文切换代价高昂。而且一旦业务耦合高的情况下，一些服务不可用，很可能会导致其他服务挂调，一台服务器挂了，流量分散到其他服务器上，也可能压垮其他服务器导致血崩。</p>
+<p>架构设计：</p>
+<p>拦截请求，并发场景请求大多是无效的，有效的仅是少数，如秒杀场景，可以在上游就进行拦截</p>
+<p>充分利用缓存redis，</p>
+<p>利用消息中间件，使用异步的方式拦截请求，实现削峰，然后根据下游处理能力，实现消息的拉取和处理。</p>
+<p>具体设计：</p>
+<p>前端可以实现拦截，比如一段时间只能点一次</p>
+<p>后端根据uid做过滤，然而用户量大的情况下，服务器压力还是很大，于是可以使用消息队列和缓存：</p>
+<p>消息队列实现对请求的缓存，当消息队列的请求收到确认的消息后才会被下发到数据库。比如秒杀时所有请求中只有几个请求才会是秒杀成功，那么消息队列收到秒杀成功的确认消息才会进行对数据库的修改。</p>
+<p>缓存读和缓存写</p>
+<p>利用redis进行读缓存，以及进行写的缓存，之后统一持久化到数据库中。</p>
+<p>总结：手段就一下几类：</p>
+<p>限流，削峰，异步处理，使用缓存，以及可以扩展，以后用户再多，加机器就可以了。</p>
+<h3 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h3><p>rpc的负载均衡</p>
+<p>客户端的负载均衡，使用负载均衡算法选取一个节点进行访问。</p>
+<p>负载均衡算法举例：</p>
+<ol>
+<li>轮询（Round Robin）</li>
+<li>加权轮询（Weight Round Robin）</li>
+<li>随机（Random）</li>
+<li>加权随机（Weight Random）</li>
+<li>源地址哈希（Hash）</li>
+<li>一致性哈希（ConsistentHash）</li>
+<li>最小连接数（Least Connections）</li>
+<li>低并发优先（Active Weight）</li>
+</ol>
+<p>高可用（HA）近似于容错，兜底</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>附 面经一份</p>
+<p>链接：</p>
+<p><a href="https://www.nowcoder.com/discuss/91999?type=2&amp;order=0&amp;pos=49&amp;page=1" target="_blank" rel="noopener">https://www.nowcoder.com/discuss/91999?type=2&amp;order=0&amp;pos=49&amp;page=1</a></p>
+<ol>
+<li><p>自我介绍     </p>
+</li>
+<li><p>说一下Java和其他语言相比有什么不同     </p>
+</li>
+<li><p>重点说一下Java和C相比什么区别，Java的好处是哪些     </p>
+</li>
+<li><p>你刚才提到了平台无关性，Java为什么平台无关     </p>
+</li>
+<li><p>你刚才提到了jvm，还有class文件。说一说具体的加载流程     </p>
+</li>
+<li><p>你刚才还说到了java堆的垃圾回收。能说说垃圾回收的方法么     </p>
+</li>
+<li><p>你都知道那些实现垃圾回收的算法，再说说分别都在哪里用到     </p>
+</li>
+<li><p>除了分代回收，你还知道其它种垃圾回收方法么     </p>
+</li>
+<li><p>可以自己设计一种针对老年代的回收方法么（一脸懵逼）     </p>
+</li>
+<li><p>redis和其他缓存相比有哪些优点呢     </p>
+</li>
+<li><p>你刚刚提到了持久化，能重点介绍一下么     </p>
+</li>
+<li><p>接下来这个问题我没太听懂，我理解的是问的AOF中append的好处。但是面试官说不是。后来就跳过去了     </p>
+</li>
+<li><p>我们把数存到redis的一个节点，在另一个节点却能查询到，这是怎么实现的呢（这里我好像答偏了，讲了讲哈希取模和一致性哈希来计算在哪个节点，不过面试官并没有打断）     </p>
+</li>
+<li><p>说一下强一致性和最终一致性     </p>
+</li>
+<li><p>Redis用的什么协议     </p>
+</li>
+<li><p>Gossip协议下面又是什么协议呢     </p>
+</li>
+<li><p>Tcp是怎么实现可靠性的     </p>
+</li>
+<li><p>我们总说TCP/IP，那么ip协议又是什么呢     </p>
+</li>
+<li><p>计算机网络模型的那几层说一下（我能说我又忘了么QAQ，明天我要打印下来粘在墙上！）     </p>
+</li>
+<li><p>说一下操作系统中的进程调度算法（这是个啥）     </p>
+</li>
+<li><p>关系型数据库平时用哪些     </p>
+</li>
+<li><p>知不知道怎么检测select语句在哪里可以优化，查询的时候有没有走索引（尴尬，不会。）     </p>
+</li>
+<li><p>了解索引不，说说是索引的数据结构     </p>
+</li>
+<li><p>你刚刚提到了B+树，那B+树和普通的树有什么区别呢     </p>
+</li>
+<li><p>Spring也是自学的么，讲一讲aop，说一说它用到了什么设计模式     </p>
+</li>
+<li><p>Aop用的是哪种代理模式，具体说一下     </p>
+</li>
+<li><p>再说说你实习时候的项目balabala     </p>
+</li>
+<li><p>你还有什么问题么</p>
+</li>
+</ol>
 
       
     </div>
@@ -519,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux系统"><span class="nav-number">3.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海量数据"><span class="nav-number">4.</span> <span class="nav-text">海量数据</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux系统"><span class="nav-number">3.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海量数据"><span class="nav-number">4.</span> <span class="nav-text">海量数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MQ消息队列"><span class="nav-number">5.</span> <span class="nav-text">MQ消息队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发场景"><span class="nav-number">6.</span> <span class="nav-text">高并发场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RPC"><span class="nav-number">7.</span> <span class="nav-text">RPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-number">8.</span> <span class="nav-text">设计模式</span></a></li></ol></div>
             
 
           </div>
