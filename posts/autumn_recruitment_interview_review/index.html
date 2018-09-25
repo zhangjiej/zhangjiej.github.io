@@ -422,67 +422,65 @@
 <li>低并发优先（Active Weight）</li>
 </ol>
 <p>高可用（HA）近似于容错，兜底</p>
-<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><p>附 面经一份</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h3><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><h4 id="jvm内存"><a href="#jvm内存" class="headerlink" title="jvm内存"></a>jvm内存</h4><p>方法区，堆     虚拟机栈 本地方法栈  程序计数器 后三个线程独享，前两个线程共享。</p>
+<ol>
+<li>程序计数器，当前线程执行字节码的行号的指示器。因此要线程独享。</li>
+<li>虚拟机栈，通俗意义上的栈内存，用于存储局部变量表，操作数栈，方法出入口等信息。局部变量表就存放了编译期间各种已知的基本数据类型。</li>
+<li>本地方法栈，和虚拟机栈类似，虚拟机栈是java执行的字节码（java方法）服务，而本地方法栈则是为虚拟机使用的native方法服务的，根据虚拟机自己的规范而不同。</li>
+<li>堆， 就是对象实例，数组等存在的内存空间，也是gc主要负责垃圾回收的空间。</li>
+<li>方法区， 存储已经被虚拟机加载的类，常量和静态变量等。</li>
+</ol>
+<h4 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h4><p>判断对象是否可回收的算法：</p>
+<ol>
+<li>引用计数算法，对每个对象的引用进行计数，引用加一，失效减一，当计数为0时，就为无效对象，可以被回收。</li>
+<li>可达性分析算法， 从一系列gc root的对象作为起点向下搜索，走过的路径称为reference chain，当对象和gc root没有任何引用链连接值，称为此对象为不可达，就是可回收的对象。</li>
+</ol>
+<p>垃圾收集算法：</p>
+<ol>
+<li>标记-清除算法，两个动作，标记所有可回收的对象，之后统一释放内存，但是这两者效率都不高，而且容易出现内存碎片，当需要分配大内存的对象时，可能需要再一次的垃圾回收。</li>
+<li>复制算法， 将内存分为两块区域，每次只在一块区域上分配内存，当某一块区域满了之后，将生存的对象复制到另一块区域，然后整个释放掉本块内存。代价就是牺牲了总体内存的大小。</li>
+<li>新生代的 eden 和 survivor， 复制算法的一个实例，两种内存区域的大小是8:1，内存分为一个eden和两个survivor。每次使用一个eden和一个survivor区域，复制的时候将两个区域存活的对象复制到另一个survivor中，再清空内存。当然，如果另一个survivor装不下的话，只能通过利用老年代来进行分配担保。</li>
+<li>标记-整理算法，相对于标记-清除算法，标记之后不清除，而是将存活的对象向一个方向移动，之后再将端边界之外的内存清理掉。</li>
+<li>分代收集算法，一般分为新生代和老年代，新生代对象生存时间短，每时都有大批量对象死去，因此适合复制算法，而老年代中对象存活率高，也没有其他空间对其进行分配担保，因此必须使用标记清除或者标记整理算法。</li>
+<li></li>
+</ol>
+<p>附 面经一份</p>
 <p>链接：</p>
 <p><a href="https://www.nowcoder.com/discuss/91999?type=2&amp;order=0&amp;pos=49&amp;page=1" target="_blank" rel="noopener">https://www.nowcoder.com/discuss/91999?type=2&amp;order=0&amp;pos=49&amp;page=1</a></p>
 <ol>
-<li><p>自我介绍     </p>
-</li>
-<li><p>说一下Java和其他语言相比有什么不同     </p>
-</li>
-<li><p>重点说一下Java和C相比什么区别，Java的好处是哪些     </p>
-</li>
-<li><p>你刚才提到了平台无关性，Java为什么平台无关     </p>
-</li>
-<li><p>你刚才提到了jvm，还有class文件。说一说具体的加载流程     </p>
-</li>
-<li><p>你刚才还说到了java堆的垃圾回收。能说说垃圾回收的方法么     </p>
-</li>
-<li><p>你都知道那些实现垃圾回收的算法，再说说分别都在哪里用到     </p>
-</li>
-<li><p>除了分代回收，你还知道其它种垃圾回收方法么     </p>
-</li>
-<li><p>可以自己设计一种针对老年代的回收方法么（一脸懵逼）     </p>
-</li>
-<li><p>redis和其他缓存相比有哪些优点呢     </p>
-</li>
-<li><p>你刚刚提到了持久化，能重点介绍一下么     </p>
-</li>
-<li><p>接下来这个问题我没太听懂，我理解的是问的AOF中append的好处。但是面试官说不是。后来就跳过去了     </p>
-</li>
-<li><p>我们把数存到redis的一个节点，在另一个节点却能查询到，这是怎么实现的呢（这里我好像答偏了，讲了讲哈希取模和一致性哈希来计算在哪个节点，不过面试官并没有打断）     </p>
-</li>
-<li><p>说一下强一致性和最终一致性     </p>
-</li>
-<li><p>Redis用的什么协议     </p>
-</li>
-<li><p>Gossip协议下面又是什么协议呢     </p>
-</li>
-<li><p>Tcp是怎么实现可靠性的     </p>
-</li>
-<li><p>我们总说TCP/IP，那么ip协议又是什么呢     </p>
-</li>
-<li><p>计算机网络模型的那几层说一下（我能说我又忘了么QAQ，明天我要打印下来粘在墙上！）     </p>
-</li>
-<li><p>说一下操作系统中的进程调度算法（这是个啥）     </p>
-</li>
-<li><p>关系型数据库平时用哪些     </p>
-</li>
-<li><p>知不知道怎么检测select语句在哪里可以优化，查询的时候有没有走索引（尴尬，不会。）     </p>
-</li>
-<li><p>了解索引不，说说是索引的数据结构     </p>
-</li>
-<li><p>你刚刚提到了B+树，那B+树和普通的树有什么区别呢     </p>
-</li>
-<li><p>Spring也是自学的么，讲一讲aop，说一说它用到了什么设计模式     </p>
-</li>
-<li><p>Aop用的是哪种代理模式，具体说一下     </p>
-</li>
-<li><p>再说说你实习时候的项目balabala     </p>
-</li>
-<li><p>你还有什么问题么</p>
-</li>
+<li>自我介绍     </li>
+<li>说一下Java和其他语言相比有什么不同     </li>
+<li>重点说一下Java和C相比什么区别，Java的好处是哪些     </li>
+<li>你刚才提到了平台无关性，Java为什么平台无关     </li>
+<li>你刚才提到了jvm，还有class文件。说一说具体的加载流程     </li>
+<li>你刚才还说到了java堆的垃圾回收。能说说垃圾回收的方法么     </li>
+<li>你都知道那些实现垃圾回收的算法，再说说分别都在哪里用到     </li>
+<li>除了分代回收，你还知道其它种垃圾回收方法么     </li>
+<li>可以自己设计一种针对老年代的回收方法么（一脸懵逼）     </li>
+<li>redis和其他缓存相比有哪些优点呢     </li>
+<li>你刚刚提到了持久化，能重点介绍一下么     </li>
+<li>接下来这个问题我没太听懂，我理解的是问的AOF中append的好处。但是面试官说不是。后来就跳过去了     </li>
+<li>我们把数存到redis的一个节点，在另一个节点却能查询到，这是怎么实现的呢（这里我好像答偏了，讲了讲哈希取模和一致性哈希来计算在哪个节点，不过面试官并没有打断）     </li>
+<li>说一下强一致性和最终一致性 答：强一致更新后读取的都是最新的值，最终一致性，更新后在一段时间之后才是最终更新的值，是弱一致性的特例。弱一致性，不能保证读到的是最新的值。</li>
+<li>Redis用的什么协议     </li>
+<li>Gossip协议下面又是什么协议呢     </li>
+<li>Tcp是怎么实现可靠性的     </li>
+<li>我们总说TCP/IP，那么ip协议又是什么呢     </li>
+<li>计算机网络模型的那几层说一下（我能说我又忘了么QAQ，明天我要打印下来粘在墙上！）     </li>
+<li>说一下操作系统中的进程调度算法（这是个啥）     </li>
+<li>关系型数据库平时用哪些     </li>
+<li>知不知道怎么检测select语句在哪里可以优化，查询的时候有没有走索引（尴尬，不会。）     </li>
+<li>了解索引不，说说是索引的数据结构     </li>
+<li>你刚刚提到了B+树，那B+树和普通的树有什么区别呢     </li>
+<li>Spring也是自学的么，讲一讲aop，说一说它用到了什么设计模式     </li>
+<li>Aop用的是哪种代理模式，具体说一下     </li>
+<li>再说说你实习时候的项目balabala     </li>
+<li>你还有什么问题么</li>
 </ol>
+<p>相关知识点</p>
+<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-9-22/99506840.jpg" alt=""></p>
+<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-9-22/80532219.jpg" alt=""></p>
+<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-9-22/24243193.jpg" alt=""></p>
 
       
     </div>
@@ -618,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux系统"><span class="nav-number">3.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海量数据"><span class="nav-number">4.</span> <span class="nav-text">海量数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MQ消息队列"><span class="nav-number">5.</span> <span class="nav-text">MQ消息队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发场景"><span class="nav-number">6.</span> <span class="nav-text">高并发场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RPC"><span class="nav-number">7.</span> <span class="nav-text">RPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-number">8.</span> <span class="nav-text">设计模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux系统"><span class="nav-number">3.</span> <span class="nav-text">linux系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#海量数据"><span class="nav-number">4.</span> <span class="nav-text">海量数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MQ消息队列"><span class="nav-number">5.</span> <span class="nav-text">MQ消息队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发场景"><span class="nav-number">6.</span> <span class="nav-text">高并发场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RPC"><span class="nav-number">7.</span> <span class="nav-text">RPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计模式"><span class="nav-number">8.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM"><span class="nav-number">9.</span> <span class="nav-text">JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jvm内存"><span class="nav-number">9.1.</span> <span class="nav-text">jvm内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#垃圾回收"><span class="nav-number">9.2.</span> <span class="nav-text">垃圾回收</span></a></li></ol></li></ol></div>
             
 
           </div>
