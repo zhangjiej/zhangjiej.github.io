@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/autumn_recruitment_interview_review/</loc>
-    <lastmod>2018-09-25T13:39:53.043Z</lastmod>
+    <loc>http://zhangjiej.github.io/posts/review_of_the_autumn_recruitment/</loc>
+    <lastmod>2018-10-27T12:04:20.057Z</lastmod>
     <data>
         <display>
-        <title>秋招面试复习</title>
-        <pubTime>2018-09-10T12:29:17.000Z</pubTime>
+        <title>找工作尾声</title>
+        <pubTime>2018-10-27T11:00:11.000Z</pubTime>
         
-        <tag>面试</tag>
+        <tag>个人总结</tag>
          
          
            
@@ -25,13 +25,33 @@
     
   <url>
     <loc>http://zhangjiej.github.io/posts/collection_of_company_information/</loc>
-    <lastmod>2018-09-25T13:03:19.921Z</lastmod>
+    <lastmod>2018-10-10T11:43:43.014Z</lastmod>
     <data>
         <display>
         <title>秋招企业信息汇总</title>
         <pubTime>2018-03-11T09:20:11.000Z</pubTime>
         
         <tag>公司</tag>
+         
+         
+           
+             
+              <breadCrumb title="找工作" url="http://zhangjiej.github.io/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangjiej.github.io/posts/autumn_recruitment_interview_review/</loc>
+    <lastmod>2018-09-25T13:39:53.043Z</lastmod>
+    <data>
+        <display>
+        <title>秋招面试复习</title>
+        <pubTime>2018-09-10T12:29:17.000Z</pubTime>
+        
+        <tag>面试</tag>
          
          
            
@@ -589,16 +609,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     <data>
         <display>
-        <title>hexo博客数学公式显示</title>
-        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
+        <title>hexo博客Front-matter模板配置</title>
+        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>mathjax</tag>
+        <tag>Front-matter</tag>
          
          
            
@@ -614,16 +634,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     <data>
         <display>
-        <title>hexo博客Front-matter模板配置</title>
-        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
+        <title>hexo博客数学公式显示</title>
+        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>Front-matter</tag>
+        <tag>mathjax</tag>
          
          
            
