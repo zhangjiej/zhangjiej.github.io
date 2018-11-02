@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangjiej.github.io/posts/null/</loc>
+    
+    <lastmod>2018-11-02T02:28:11.219Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangjiej.github.io/posts/review_of_the_autumn_recruitment/</loc>
     
-    <lastmod>2018-10-27T12:04:20.057Z</lastmod>
+    <lastmod>2018-10-29T07:25:30.108Z</lastmod>
     
   </url>
   
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/null/</loc>
-    
-    <lastmod>2018-03-24T03:31:24.379Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangjiej.github.io/posts/summary_of_NSDI/</loc>
     
     <lastmod>2018-03-17T12:47:13.710Z</lastmod>
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/compressive_sensing_introduction/</loc>
+    <loc>http://zhangjiej.github.io/posts/URL_optimization_in_hexo/</loc>
     
     <lastmod>2018-01-15T07:23:08.938Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/URL_optimization_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/compressive_sensing_introduction/</loc>
     
     <lastmod>2018-01-15T07:23:08.938Z</lastmod>
     
