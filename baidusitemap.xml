@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>http://zhangjiej.github.io/posts/domain_setting_and_solution_of_qiniu/</loc>
+    <lastmod>2018-11-24T01:56:12.802Z</lastmod>
+    <data>
+        <display>
+        <title>七牛云图床链接失效和购买域名</title>
+        <pubTime>2018-11-24T00:50:49.000Z</pubTime>
+        
+        <tag>七牛云</tag>
+         
+        <tag>域名</tag>
+         
+        <tag>测试链接</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
+          
+             
+              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangjiej.github.io/posts/null/</loc>
     <lastmod>2018-11-02T02:28:11.219Z</lastmod>
     <data>
@@ -594,16 +621,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     <data>
         <display>
-        <title>hexo博客数学公式显示</title>
-        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
+        <title>hexo博客Front-matter模板配置</title>
+        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>mathjax</tag>
+        <tag>Front-matter</tag>
          
          
            
@@ -619,16 +646,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     <data>
         <display>
-        <title>hexo博客Front-matter模板配置</title>
-        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
+        <title>hexo博客数学公式显示</title>
+        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>Front-matter</tag>
+        <tag>mathjax</tag>
          
          
            

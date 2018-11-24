@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangjiej.github.io/posts/domain_setting_and_solution_of_qiniu/</loc>
+    
+    <lastmod>2018-11-24T01:56:12.802Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangjiej.github.io/posts/null/</loc>
     
     <lastmod>2018-11-02T02:28:11.219Z</lastmod>
@@ -170,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
     
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
     
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     
