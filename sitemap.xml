@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
+    
+    <lastmod>2019-04-08T03:03:24.210Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangjiej.github.io/posts/domain_setting_and_solution_of_qiniu/</loc>
     
     <lastmod>2019-04-08T02:56:34.411Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://zhangjiej.github.io/posts/autumn_recruitment_interview_review/</loc>
     
     <lastmod>2019-04-08T02:25:49.395Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
-    
-    <lastmod>2019-04-08T02:24:38.567Z</lastmod>
     
   </url>
   

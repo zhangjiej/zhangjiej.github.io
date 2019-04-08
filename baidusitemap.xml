@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
+    <lastmod>2019-04-08T03:03:24.210Z</lastmod>
+    <data>
+        <display>
+        <title>hexo博客图床设置</title>
+        <pubTime>2018-01-15T09:32:04.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>图床</tag>
+         
+        <tag>七牛云</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
+          
+             
+              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangjiej.github.io/posts/domain_setting_and_solution_of_qiniu/</loc>
     <lastmod>2019-04-08T02:56:34.411Z</lastmod>
     <data>
@@ -114,33 +141,6 @@
            
              
               <breadCrumb title="找工作" url="http://zhangjiej.github.io/categories/%E6%89%BE%E5%B7%A5%E4%BD%9C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
-    <lastmod>2019-04-08T02:24:38.567Z</lastmod>
-    <data>
-        <display>
-        <title>hexo博客图床设置</title>
-        <pubTime>2018-01-15T09:32:04.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>图床</tag>
-         
-        <tag>七牛云</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
-          
-             
-              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
           
         </display>
     </data>
