@@ -77,14 +77,14 @@
 
 <meta name="description" content="张杰钧的博客，知识的积累与分享。zhangjiejun2016@foxmail.com">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://zhangjiej.github.io/tags/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://zhangjiej.github.io/categories/index.html">
 <meta property="og:site_name" content="张杰钧的博客">
 <meta property="og:description" content="张杰钧的博客，知识的积累与分享。zhangjiejun2016@foxmail.com">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-11T07:48:08.244Z">
+<meta property="og:updated_time" content="2018-01-12T07:18:18.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="张杰钧的博客，知识的积累与分享。zhangjiejun2016@foxmail.com">
 
 
@@ -117,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="http://zhangjiej.github.io/tags/"/>
+  <link rel="canonical" href="http://zhangjiej.github.io/categories/"/>
 
 
 
@@ -443,7 +443,7 @@
 <p>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；</p>
 <p>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；</p>
 <p>8.所有叶子结点位于同一层；</p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-3-16/30882006.jpg" alt="B-树"></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/30882006.jpg" alt="B-树"></p>
 <p>显然对于B-树每一次搜索都是在当前节点上进行二分查找，知道找到叶子节点为止，由于每层非叶子节点有着最小M/2的限制使得节点的利用比较合理，保证了最低的搜索性能为O（logn）同时B-树的搜索结果可能出现在中间非叶子节点上。</p>
 <p><strong>B+树</strong>是B-树的一种变体，也是一种多路搜索树，</p>
 <p>1.其定义基本与B-树同，除了：</p>
@@ -451,7 +451,7 @@
 <p>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；</p>
 <p>5.为所有叶子结点增加一个链指针；</p>
 <p>6.所有关键字都在叶子结点出现；</p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-3-16/24656504.jpg" alt="B+树"></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/24656504.jpg" alt="B+树"></p>
 <p>B+的特性：</p>
 <p>1.所有关键字都出现在叶子结点的链表中（稠密索引），且链表中的关键字恰好是有序的；</p>
 <p>2.不可能在非叶子结点命中；</p>
@@ -477,7 +477,7 @@
 </ul>
 </blockquote>
 <p>结论，红黑树没有一条路径的长度是其他路径的长度的二倍，但是其高度要大于AVL树。</p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-3-16/31603940.jpg" alt="红黑树"></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/31603940.jpg" alt="红黑树"></p>
 <h4 id="10-HashMap-和-TreeMap（补充集合类）"><a href="#10-HashMap-和-TreeMap（补充集合类）" class="headerlink" title="10.HashMap 和 TreeMap（补充集合类）"></a>10.HashMap 和 TreeMap（补充集合类）</h4><p>先给一个<a href="https://www.jianshu.com/p/50e19038e361" target="_blank" rel="noopener">java集合类的博客</a>，很全很强大</p>
 <p>先说一下Set和Map的区别：</p>
 <p>Map是key-value结构，其中的key要求是不能重复，允许有一个null值，value则没有要求，可以重复也可以有多个null值。</p>
@@ -610,7 +610,7 @@
 </ol>
 <p>宕机与数据迁移：</p>
 <h4 id="16-集合类源码"><a href="#16-集合类源码" class="headerlink" title="16.集合类源码"></a>16.集合类源码</h4><p>图片链接：<a href="http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html" target="_blank" rel="noopener">http://www.cnblogs.com/xwdreamer/archive/2012/05/30/2526822.html</a></p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-3-21/86674668.jpg" alt="集合类框架图"></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/86674668.jpg" alt="集合类框架图"></p>
 <p>显然，点线如 Iteraror Collection等是接口，划线 AbstractCollection等是抽象类，实线则是类。</p>
 <p>HashMap：</p>
 <p>加载因子，扩容，拉链检测等</p>
@@ -691,7 +691,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> n[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">       sort(n,left,right);</span><br><span class="line">   &#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span> <span class="params">(<span class="keyword">int</span>[] n, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">   	<span class="keyword">if</span> (l &gt;= r)</span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">       <span class="keyword">int</span> p = partition(n,l,r);</span><br><span class="line">       sort(n,l,p-<span class="number">1</span>);</span><br><span class="line">       sort(n,p+<span class="number">1</span>;r);</span><br><span class="line">&#125; </span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span> []n, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (l &gt;= r)  <span class="comment">// 可有可无，因为在外面递归的时候已经有停止条件了</span></span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">       <span class="keyword">int</span> i = l, j = r; <span class="comment">//可有可无，直接用l和r也行</span></span><br><span class="line">       <span class="keyword">int</span> pivot = n[i]; <span class="comment">//保存标尺的值</span></span><br><span class="line">       <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">           <span class="keyword">while</span> (n[j] &gt;= pivot &amp;&amp; j &gt; i) </span><br><span class="line">               j--;</span><br><span class="line">           <span class="keyword">if</span> (j &gt; i) </span><br><span class="line">               n[i++] = n[j];         </span><br><span class="line">           <span class="keyword">while</span> (n[i] &lt; pivot &amp;&amp; i &lt; j)  </span><br><span class="line">               i++;</span><br><span class="line">           <span class="keyword">if</span> (i &lt; j) </span><br><span class="line">               n[j--] = n[i];     </span><br><span class="line">       &#125;</span><br><span class="line">       n[i] = pivot;</span><br><span class="line">       <span class="keyword">return</span> i;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <h4 id="24-Linux常见命令"><a href="#24-Linux常见命令" class="headerlink" title="24.Linux常见命令"></a>24.Linux常见命令</h4><h4 id="25-ER图以及SQL语句"><a href="#25-ER图以及SQL语句" class="headerlink" title="25.ER图以及SQL语句"></a>25.ER图以及SQL语句</h4><h4 id="26-Tomcat以及与其他服务器框架的区别"><a href="#26-Tomcat以及与其他服务器框架的区别" class="headerlink" title="26.Tomcat以及与其他服务器框架的区别"></a>26.Tomcat以及与其他服务器框架的区别</h4><p>内容大多来自知乎链接：<a href="https://www.zhihu.com/question/32212996/answer/87524617" target="_blank" rel="noopener">https://www.zhihu.com/question/32212996/answer/87524617</a></p>
 <p>HTTP服务器本质上也是一种应用程序——它通常运行在服务器之上，绑定服务器的IP地址并监听某一个tcp端口来接收并处理HTTP请求，这样客户端（一般来说是IE, Firefox，Chrome这样的浏览器）就能够通过HTTP协议来获取服务器上的网页（HTML格式）、文档（PDF格式）、音频（MP4格式）、视频（MOV格式）等等资源。下图描述的就是这一过程：</p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-5-8/62507638.jpg" alt=""></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/62507638.jpg" alt=""></p>
 <p>不仅仅是Apache HTTP Server 和Nginx，绝大所编程语言所包含的类库中也都实现了检点HTTP服务器方便开发者使用。</p>
 <ul>
 <li><a href="https://link.zhihu.com/?target=https%3A//docs.oracle.com/javase/8/docs/jre/api/net/httpserver/spec/com/sun/net/httpserver/HttpServer.html" target="_blank" rel="noopener">HttpServer (Java HTTP Server )</a></li>
@@ -702,7 +702,7 @@
 <p>Apache Tomcat则是指Apache基金会下的另外一个项目，与Apache HTTP Server相比，Tomcat能够动态的生成资源并返回到客户端。Apache HTTP Server 和Nginx都能讲一个文本文件内容通过Http协议返回给客户端。但是这个文本文件内容是固定的，也就是静态资源。</p>
 <p>Apache HTTP Server和Nginx本身不支持生成动态页面，但它们可以通过其他模块来支持（例如通过Shell、PHP、Python脚本程序来动态生成内容）。</p>
 <p>如果想要使用Java程序来动态生成资源内容，使用这一类HTTP服务器很难做到。<a href="https://link.zhihu.com/?target=http%3A//www.tianmaying.com/tutorial/servlet-intro" target="_blank" rel="noopener">Java Servlet</a>技术以及衍生的<a href="https://link.zhihu.com/?target=http%3A//www.tianmaying.com/tutorial/jsp-intro" target="_blank" rel="noopener">Java Server Pages</a>技术可以让Java程序也具有处理HTTP请求并且返回内容（由程序动态控制）的能力，Tomcat正是支持运行Servlet/JSP应用程序的容器（Container）:</p>
-<p><img src="http://p2l5ojacr.bkt.clouddn.com/18-5-8/99954387.jpg" alt=""></p>
+<p><img src="http://picture-zjj.oss-cn-beijing.aliyuncs.com/blog/99954387.jpg" alt=""></p>
 <ul>
 <li>管理Servlet程序的生命周期</li>
 <li>将URL映射到指定的Servlet进行处理</li>
@@ -1054,7 +1054,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
