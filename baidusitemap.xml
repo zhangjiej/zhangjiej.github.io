@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>http://zhangjiej.github.io/posts/insert_video_in_blog/</loc>
+    <lastmod>2019-04-23T07:42:25.516Z</lastmod>
+    <data>
+        <display>
+        <title>博客插入视频</title>
+        <pubTime>2019-04-23T07:37:46.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>html5</tag>
+         
+        <tag>视频</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://zhangjiej.github.io/categories/hexo/"/>
+          
+             
+              <breadCrumb title="细节配置" url="http://zhangjiej.github.io/categories/hexo/%E7%BB%86%E8%8A%82%E9%85%8D%E7%BD%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhangjiej.github.io/posts/picture_storage_for_blog_in_hexo/</loc>
     <lastmod>2019-04-08T03:03:24.210Z</lastmod>
     <data>
