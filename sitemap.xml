@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangjiej.github.io/posts/the_lastday_in_bupt/</loc>
+    
+    <lastmod>2019-06-27T15:18:29.100Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangjiej.github.io/posts/insert_video_in_blog/</loc>
     
     <lastmod>2019-04-23T08:51:55.087Z</lastmod>
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/the_solution_of_problems/</loc>
-    
-    <lastmod>2018-04-21T14:49:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangjiej.github.io/posts/note_of_jianzhioffer_solution_Java4/</loc>
     
     <lastmod>2018-04-09T03:14:50.265Z</lastmod>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
     
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
     
     <lastmod>2018-01-13T13:09:09.911Z</lastmod>
     
