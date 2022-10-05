@@ -752,16 +752,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.000Z</lastmod>
     <data>
         <display>
-        <title>hexo博客Front-matter模板配置</title>
-        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
+        <title>hexo博客数学公式显示</title>
+        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>Front-matter</tag>
+        <tag>mathjax</tag>
          
          
            
@@ -777,16 +777,16 @@
 
     
   <url>
-    <loc>http://zhangjiej.github.io/posts/use_mathjax_in_hexo/</loc>
+    <loc>http://zhangjiej.github.io/posts/config_Front-matter_in_hexo/</loc>
     <lastmod>2018-01-13T13:09:09.000Z</lastmod>
     <data>
         <display>
-        <title>hexo博客数学公式显示</title>
-        <pubTime>2018-01-13T02:02:59.000Z</pubTime>
+        <title>hexo博客Front-matter模板配置</title>
+        <pubTime>2018-01-13T08:20:31.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>mathjax</tag>
+        <tag>Front-matter</tag>
          
          
            
